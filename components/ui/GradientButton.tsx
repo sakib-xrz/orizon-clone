@@ -22,30 +22,33 @@ export function GradientButton({
   className?: string;
   ariaLabel?: string;
 }) {
-  const resolvedMedia: Media =
-    media ?? (withArrow ? "arrow" : "none");
+  const resolvedMedia: Media = media ?? (withArrow ? "arrow" : "none");
 
   const isGradient = variant === "gradient" || variant === "compact";
   const isCompact = variant === "compact";
 
   const base =
-    "orizon-btn group relative inline-flex items-center overflow-hidden uppercase focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2";
+    "group relative inline-flex items-center overflow-hidden uppercase focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2";
+  const gradientChrome =
+    "rounded-pill bg-[linear-gradient(#2b00d4,#2b00d4)_padding-box,linear-gradient(182deg,#3d83fb,#74a3ff)_border-box] text-white shadow-[1px_1px_2px_rgba(44,46,129,0.06),3px_3px_4px_rgba(44,46,129,0.1),9px_7px_9px_rgba(44,46,129,0.13),18px_15px_18px_rgba(44,46,129,0.15),32px_25px_32px_rgba(44,46,129,0.2),50px_40px_60px_rgba(44,46,129,0.09)]";
 
   const variants: Record<Variant, string> = {
-    gradient: "orizon-btn-main orizon-btn-gradient orizon-btn-shadow",
-    compact: "orizon-btn-compact orizon-btn-gradient orizon-btn-shadow",
-    outline: "orizon-btn-outline",
-    light: "orizon-btn-light",
+    gradient: `min-h-[50px] gap-2.5 pl-7 pr-[3px] ${gradientChrome}`,
+    compact: `h-[50px] min-h-[50px] w-40 justify-center px-5 ${gradientChrome}`,
+    outline:
+      "z-[1] min-h-[50px] gap-2.5 rounded-pill border border-primary-blue bg-white pl-7 pr-[3px] text-primary-blue",
+    light:
+      "min-h-[50px] gap-2.5 rounded-pill bg-white pl-7 pr-[3px] text-ink shadow-soft",
   };
 
   const labelClass =
-    "btn-label relative z-[1] font-semibold text-white " +
+    "relative z-[1] font-semibold text-white " +
     (isCompact
       ? "text-[13px] leading-[15px] tracking-[0.08em]"
       : "text-[15px] leading-[1.2] tracking-[1.17px]");
 
   const outlineLabelClass =
-    "btn-label relative z-[1] text-[15px] font-semibold leading-[1.2] tracking-[1.17px] text-primary-blue";
+    "relative z-[1] text-[15px] font-semibold leading-[1.2] tracking-[1.17px] text-primary-blue";
 
   return (
     <a
@@ -54,9 +57,15 @@ export function GradientButton({
       className={`${base} ${variants[variant]} ${className}`}
     >
       {isGradient ? (
-        <span className="bg-btn-layer" aria-hidden="true" />
+        <span
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-full w-full bg-[url('/button-bg-layer.png')] bg-cover bg-center transition-all duration-[550ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:h-[300%] group-hover:w-[150%] group-focus-visible:h-[300%] group-focus-visible:w-[150%]"
+          aria-hidden="true"
+        />
       ) : (
-        <span className="hover-btn-layer" aria-hidden="true" />
+        <span
+          className="pointer-events-none absolute inset-0 w-0 bg-primary-blue/5 transition-[width] duration-[550ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:w-full group-focus-visible:w-full"
+          aria-hidden="true"
+        />
       )}
 
       <span className={variant === "outline" ? outlineLabelClass : labelClass}>
@@ -64,39 +73,39 @@ export function GradientButton({
       </span>
 
       {resolvedMedia === "arrow" && isGradient && (
-        <span className="btn-image-holder">
+        <span className="relative z-[1] h-10 shrink-0">
           <Image
             src="/button-arrow.svg"
             alt=""
             width={40}
             height={40}
-            className="btn-image btn-image-shadow"
+            className="block h-10 w-10 rounded-full border border-button-border object-contain object-right"
             aria-hidden
           />
         </span>
       )}
 
       {resolvedMedia === "avatars" && isGradient && (
-        <span className="btn-image-holder btn-image-holder-avatars">
+        <span className="relative z-[1] h-10 min-w-10 max-w-[116px] shrink-0">
           <Image
             src="/button-avatars.png"
             alt=""
             width={116}
             height={40}
-            className="btn-image btn-image-avatars"
+            className="block h-10 w-auto max-w-[116px] object-contain object-right"
             aria-hidden
           />
         </span>
       )}
 
       {resolvedMedia === "arrow" && variant === "outline" && (
-        <span className="btn-image-holder">
+        <span className="relative z-[1] h-10 shrink-0">
           <Image
             src="/button-arrow-outline.svg"
             alt=""
             width={40}
             height={40}
-            className="btn-image btn-image-shadow"
+            className="block h-10 w-10 rounded-full border border-button-border object-contain object-right"
             aria-hidden
           />
         </span>

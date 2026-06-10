@@ -63,7 +63,10 @@ export function Engagements() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="engagements" className="container-x py-16 lg:py-24">
+    <section
+      id="engagements"
+      className="mx-auto w-full max-w-[1200px] px-5 py-16 sm:px-6 lg:px-8 lg:py-24"
+    >
       <Reveal className="text-center">
         <h2 className="mx-auto max-w-2xl text-4xl font-bold sm:text-5xl">
           What do you need help with?

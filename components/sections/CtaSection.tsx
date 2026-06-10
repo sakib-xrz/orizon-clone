@@ -5,13 +5,19 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function CtaSection() {
   return (
-    <section id="contact" className="container-x py-12 lg:py-20">
+    <section
+      id="contact"
+      className="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-6 lg:px-8 lg:py-20"
+    >
       <Reveal>
         <div className="rounded-card-lg border border-ink/5 bg-white p-8 shadow-soft sm:p-12 lg:p-14">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
               <h2 className="text-4xl font-bold sm:text-5xl">
-                Let&apos;s <span className="gradient-text">talk</span>
+                Let&apos;s{" "}
+                <span className="bg-heading-gradient bg-clip-text text-transparent">
+                  talk
+                </span>
               </h2>
               <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-muted">
                 Design done right and fast by people you can trust.

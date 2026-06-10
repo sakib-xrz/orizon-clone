@@ -4,10 +4,12 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function TrustedBy() {
   return (
-    <section className="container-x py-12 lg:py-16">
+    <section className="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-6 lg:px-8 lg:py-16">
       <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr] lg:items-end">
         <h2 className="text-4xl font-bold sm:text-5xl">
-          <span className="gradient-text">Trusted by</span>
+          <span className="bg-heading-gradient bg-clip-text text-transparent">
+            Trusted by
+          </span>
           <br className="hidden sm:block" /> awesome clients
         </h2>
         <p className="text-[15px] leading-relaxed text-muted lg:text-base">

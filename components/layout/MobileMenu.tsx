@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { GradientButton } from "@/components/ui/GradientButton";
 import { useLenis } from "@/components/providers/SmoothScrollProvider";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const NAV = [
   { label: "Home", index: "01", href: "/" },
@@ -58,7 +59,9 @@ const SOCIAL = [
 function NavChevron({ active }: { active: boolean }) {
   return (
     <span
-      className={`side-nav-link-button${active ? " is-active" : ""}`}
+      className={`relative flex h-7 w-7 shrink-0 items-center justify-center rounded-full ${
+        active ? "bg-primary-blue text-white" : "bg-ink/[0.04] text-ink"
+      }`}
       aria-hidden="true"
     >
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -67,7 +70,7 @@ function NavChevron({ active }: { active: boolean }) {
           fill="currentColor"
         />
       </svg>
-      <span className="side-nav-border-line" />
+      <span className="pointer-events-none absolute inset-0 rounded-full bg-[linear-gradient(162deg,rgba(255,255,255,0.1)_11%,rgba(255,255,255,0.02))] opacity-50" />
     </span>
   );
 }
@@ -81,7 +84,7 @@ export function MobileMenu({
 }) {
   const pathname = usePathname();
   const lenis = useLenis();
-
+  const isMobile = useMediaQuery("(max-width: 768px)");
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     if (lenis) {
@@ -114,7 +117,7 @@ export function MobileMenu({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="side-nav-overlay"
+            className="fixed inset-0 z-[70] cursor-default border-0 bg-transparent p-0 md:bg-ink/40 md:backdrop-blur-lg"
             aria-label="Close menu"
             onClick={onClose}
           />
@@ -124,30 +127,33 @@ export function MobileMenu({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 260, damping: 30 }}
-            className="side-nav-panel"
+            className="fixed inset-y-0 right-0 z-[80] h-dvh w-full max-w-full overflow-hidden bg-white md:w-[60vw] md:max-w-[520px] md:rounded-l-[20px]"
             role="dialog"
             aria-modal="true"
             aria-label="Site navigation"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="side-nav-scroller" data-lenis-prevent>
-              <div className="side-nav-mobile-image-wrap">
+            <div
+              className="flex h-full flex-col overflow-y-auto px-2.5 pb-10 pt-0 md:pt-16"
+              data-lenis-prevent
+            >
+              <div className="block h-[230px] w-full flex-none overflow-hidden rounded-[1.25rem] md:hidden">
                 <Image
                   src="/side-nav-mobile.avif"
                   alt=""
                   width={800}
                   height={230}
-                  className="side-nav-mobile-image"
+                  className="h-full w-full object-cover object-[50%_70%]"
                   priority
                 />
               </div>
 
-              <div className="side-nav-inner relative max-w-sm mx-auto">
+              <div className="mx-auto w-full max-w-sm flex-1 px-[0.975rem] pt-4 md:pt-0">
                 <button
                   type="button"
                   onClick={onClose}
                   aria-label="Close menu"
-                  className="side-nav-close right-1.5"
+                  className="absolute right-5 top-4 z-[2] flex size-12 shadow-md items-center justify-center rounded-full border-0 bg-white text-ink transition-transform duration-200 hover:scale-105 md:-top-12"
                 >
                   <svg
                     width="18"
@@ -165,7 +171,10 @@ export function MobileMenu({
                   </svg>
                 </button>
 
-                <nav className="side-nav-links mt-5" aria-label="Primary">
+                <nav
+                  className="-mx-[0.9375rem] mt-5 flex w-[calc(100%+1.875rem)] flex-col gap-2"
+                  aria-label="Primary"
+                >
                   {NAV.map((item) => {
                     const active = isActive(item.href);
                     return (
@@ -173,16 +182,20 @@ export function MobileMenu({
                         key={item.label}
                         href={item.href}
                         onClick={onClose}
-                        className={`side-nav-link${active ? " is-active" : ""}`}
+                        className="block px-[0.9375rem] py-1 text-inherit no-underline"
                       >
-                        <span className="side-nav-link-row">
-                          <span className="side-nav-link-title">
-                            <span className="side-nav-link-label">
+                        <span className="flex cursor-pointer items-center justify-between gap-[0.21875rem]">
+                          <span className="flex min-w-0 items-baseline gap-[0.21875rem]">
+                            <span
+                              className={`m-0 text-[2rem] font-normal leading-[1.5] tracking-normal ${
+                                active ? "text-ink" : "text-ink/[0.38]"
+                              }`}
+                            >
                               {item.label}
                             </span>
                             {active && (
-                              <span className="side-nav-link-index-wrap">
-                                <span className="side-nav-link-index">
+                              <span className="mt-[0.4rem] self-start">
+                                <span className="block text-sm font-medium leading-none tracking-normal text-gray-500">
                                   {item.index}
                                 </span>
                               </span>
@@ -195,47 +208,59 @@ export function MobileMenu({
                   })}
                 </nav>
 
-                <div className="side-nav-spacer" aria-hidden="true" />
+                <div
+                  className="mt-8 h-px w-full bg-[linear-gradient(90deg,#0f0928,rgba(15,9,40,0.18))] opacity-[0.08]"
+                  aria-hidden="true"
+                />
 
-                <div className="side-nav-cta-block">
-                  <p className="side-nav-cta-title mt-5">
+                <div className="mt-0">
+                  <p className="mb-5 mt-5 text-xl font-normal leading-[1.4] text-ink">
                     Have a project for us?
                   </p>
                   <GradientButton
                     href="#contact"
-                    media="avatars"
-                    className="orizon-btn-menu"
+                    media={isMobile ? "arrow" : "avatars"}
+                    className="w-full justify-between"
                   >
                     Let&apos;s talk
                   </GradientButton>
-                  <div className="side-nav-footnote">
-                    <p>Need top designs at an affordable rate?</p>
-                    <p>
-                      <a href="#" onClick={onClose}>
+                  <div className="mt-6 flex flex-col gap-1">
+                    <p className="m-0 text-sm leading-[1.5] text-ink">
+                      Need top designs at an affordable rate?
+                    </p>
+                    <p className="m-0 text-sm leading-[1.5] text-ink">
+                      <a
+                        href="#"
+                        onClick={onClose}
+                        className="text-primary-blue no-underline"
+                      >
                         Check out our Design Subscription
                       </a>
                     </p>
                   </div>
                 </div>
 
-                <div className="side-nav-spacer" aria-hidden="true" />
+                <div
+                  className="mt-8 h-px w-full bg-[linear-gradient(90deg,#0f0928,rgba(15,9,40,0.18))] opacity-[0.08]"
+                  aria-hidden="true"
+                />
 
-                <div className="side-nav-bottom-links">
+                <div className="-ml-1.5 mr-1.5 mt-8 grid w-[calc(100%+12px)] grid-cols-2 gap-2">
                   {BOTTOM_LINKS.map((item) => (
                     <a
                       key={item.label}
                       href={item.href}
                       onClick={onClose}
-                      className="side-nav-bottom-link"
+                      className="px-1.5 py-1 text-inherit no-underline"
                     >
-                      <span className="side-nav-bottom-link-row">
+                      <span className="flex items-center gap-1 text-sm leading-[1.5] text-ink">
                         <span>{item.label}</span>
                         <Image
                           src="/chevron-right.svg"
                           alt=""
                           width={16}
                           height={16}
-                          className="side-nav-bottom-chevron"
+                          className="h-4 w-4 shrink-0"
                           aria-hidden
                         />
                       </span>
@@ -243,8 +268,8 @@ export function MobileMenu({
                   ))}
                 </div>
 
-                <div className="side-nav-social">
-                  <div className="side-nav-social-row">
+                <div className="mt-8 pt-6">
+                  <div className="flex w-full items-center justify-between px-1">
                     {SOCIAL.map((item) => (
                       <a
                         key={item.label}
@@ -252,14 +277,14 @@ export function MobileMenu({
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={item.label}
-                        className="side-nav-social-link"
+                        className="flex items-center justify-center opacity-85 transition-opacity duration-200 hover:opacity-100"
                       >
                         <Image
                           src={item.icon}
                           alt=""
                           width={20}
                           height={20}
-                          className="side-nav-social-icon"
+                          className="h-5 w-5"
                           aria-hidden
                         />
                       </a>

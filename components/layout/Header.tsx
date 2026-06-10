@@ -68,7 +68,7 @@ export function Header() {
         className="fixed inset-x-0 top-0 z-50"
       >
         <div
-          className={`container-x flex items-center transition-all duration-300 ${
+          className={`mx-auto flex w-full max-w-[1200px] items-center px-5 transition-all duration-300 sm:px-6 lg:px-8 ${
             showLogo ? "justify-between py-5" : "justify-end py-3"
           } ${isHidden ? "pointer-events-none" : "pointer-events-auto"}`}
         >
@@ -100,13 +100,13 @@ export function Header() {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
-              className="menu-button"
+              className="relative z-[90] flex h-[3.25rem] w-[3.25rem] shrink-0 items-center justify-center overflow-hidden rounded-full border-0 bg-[linear-gradient(#fff,rgba(255,255,255,0.55))] p-0 shadow-[-22px_-27px_40px_4px_rgba(96,96,116,0.2),22px_27px_40px_4px_rgba(96,96,116,0.14)] transition-transform duration-200 hover:scale-[1.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
-              <span className="menu-button-glass" aria-hidden="true" />
-              <span className="menu-button-inner">
-                <span className="menu-button-bg" aria-hidden="true" />
-                <span className="menu-line" />
-                <span className="menu-line-bottom" />
+              <span className="absolute inset-0 rounded-full bg-white/30 backdrop-blur-[7px]" aria-hidden="true" />
+              <span className="relative flex h-full w-full flex-col items-center justify-center">
+                <span className="absolute inset-0 rounded-full bg-ink/[0.04] opacity-50" aria-hidden="true" />
+                <span className="relative mb-[5px] block h-0.5 w-5 rounded bg-primary-blue" />
+                <span className="relative block h-0.5 w-5 rounded bg-primary-blue" />
               </span>
             </button>
           </div>

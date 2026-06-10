@@ -4,10 +4,14 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function DeepUx() {
   return (
-    <section className="container-x py-12 lg:py-20">
+    <section className="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-6 lg:px-8 lg:py-20">
       <div className="grid gap-6 lg:grid-cols-[1.5fr_1fr] lg:items-end">
         <h2 className="text-4xl font-bold sm:text-5xl lg:text-[56px]">
-          From <span className="gradient-text">simple apps</span> to
+          From{" "}
+          <span className="bg-heading-gradient bg-clip-text text-transparent">
+            simple apps
+          </span>{" "}
+          to
           enterprise-scale UX
         </h2>
         <p className="text-[15px] leading-relaxed text-muted lg:text-base">

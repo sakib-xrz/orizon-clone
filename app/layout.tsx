@@ -40,9 +40,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jakarta.variable} ${display.variable} ${caveat.variable}`}
+      className={`${jakarta.variable} ${display.variable} ${caveat.variable} [text-rendering:optimizeLegibility]`}
     >
-      <body className="font-sans antialiased">
+      <body className="overflow-x-hidden bg-white font-sans text-body text-muted antialiased">
         <SmoothScrollProvider>
           <CursorDot />
           {children}

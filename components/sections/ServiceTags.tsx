@@ -48,7 +48,7 @@ function Col({ items }: { items: string[] }) {
 
 export function ServiceTags() {
   return (
-    <section className="container-x pb-16">
+    <section className="mx-auto w-full max-w-[1200px] px-5 pb-16 sm:px-6 lg:px-8">
       <Reveal>
         <div className="rounded-card-lg bg-input-bg p-8 sm:p-12">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

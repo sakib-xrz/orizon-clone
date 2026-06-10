@@ -70,7 +70,10 @@ export function FeaturedProjects() {
   };
 
   return (
-    <section id="work" className="container-x py-20 lg:py-28">
+    <section
+      id="work"
+      className="mx-auto w-full max-w-[1200px] px-5 py-20 sm:px-6 lg:px-8 lg:py-28"
+    >
       <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
         <SectionLabel>Featured projects</SectionLabel>
         <div className="flex items-center gap-4">

@@ -47,7 +47,7 @@ export function Testimonials() {
   const q = QUOTES[idx];
 
   return (
-    <section className="container-x py-20 lg:py-28">
+    <section className="mx-auto w-full max-w-[1200px] px-5 py-20 sm:px-6 lg:px-8 lg:py-28">
       <SectionLabel>Word on the street</SectionLabel>
 
       <div className="mt-10 grid items-center gap-10 lg:grid-cols-[320px_1fr]">

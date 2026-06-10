@@ -20,7 +20,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        {/* <LogoStrip />
+        <LogoStrip />
         <FeaturedProjects />
         <Engagements />
         <Testimonials />
@@ -31,7 +31,7 @@ export default function Home() {
         <ServiceTags />
         <DeepUx />
         <TrustedBy />
-        <CtaSection /> */}
+        <CtaSection />
       </main>
       <Footer />
     </>

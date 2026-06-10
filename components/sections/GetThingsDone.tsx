@@ -17,7 +17,7 @@ const COLS = [
 
 export function GetThingsDone() {
   return (
-    <section className="container-x py-12 lg:py-16">
+    <section className="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-6 lg:px-8 lg:py-16">
       <Reveal>
         <div className="overflow-hidden rounded-card-lg bg-[linear-gradient(135deg,#2b00d4,#3a28dc_60%,#4f4cff)] p-8 text-white sm:p-12 lg:p-16">
           <div className="grid items-start gap-10 lg:grid-cols-2">

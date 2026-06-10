@@ -3,7 +3,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function WhyOrizon() {
   return (
-    <section className="container-x py-12 lg:py-16">
+    <section className="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-6 lg:px-8 lg:py-16">
       <SectionLabel>Why Orizon</SectionLabel>
       <Reveal className="mt-6">
         <div className="overflow-hidden rounded-card-lg bg-navy p-8 text-white sm:p-12 lg:p-16">

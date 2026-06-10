@@ -63,7 +63,7 @@ function FooterCol({ title, items }: { title: string; items: string[] }) {
 export function Footer() {
   return (
     <footer className="border-t border-ink/5 bg-white">
-      <div className="container-x py-16 lg:py-20">
+      <div className="mx-auto w-full max-w-[1200px] px-5 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_2fr]">
           <div>
             <OrizonLogo />
@@ -73,14 +73,18 @@ export function Footer() {
               screen.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <GradientButton href="#contact" media="none" className="orizon-btn-footer">
+              <GradientButton
+                href="#contact"
+                media="none"
+                className="min-h-12 justify-center !px-6"
+              >
                 Contact Us
               </GradientButton>
               <GradientButton
                 href="#"
                 variant="outline"
                 media="none"
-                className="orizon-btn-footer"
+                className="min-h-12 justify-center !px-6"
               >
                 Refer Us
               </GradientButton>

@@ -37,10 +37,15 @@ const SERVICES: Service[] = [
 
 export function Services() {
   return (
-    <section id="services" className="container-x py-20 lg:py-28">
+    <section
+      id="services"
+      className="mx-auto w-full max-w-[1200px] px-5 py-20 sm:px-6 lg:px-8 lg:py-28"
+    >
       <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
         <h2 className="text-4xl font-bold sm:text-5xl">
-          <span className="gradient-text">What</span>
+          <span className="bg-heading-gradient bg-clip-text text-transparent">
+            What
+          </span>
           <br className="hidden sm:block" /> we excel at
         </h2>
         <div className="flex items-center gap-4">
