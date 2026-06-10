@@ -71,9 +71,9 @@ function ColBody({ children }: { children: React.ReactNode }) {
   );
 }
 
-/* ------------------------------- card 1: why orizon ------------------------------ */
+/* ------------------------------- card 1: why maxverse ------------------------------ */
 
-function CardWhyOrizon({ isStatic }: { isStatic?: boolean }) {
+function CardWhyMaxVerse({ isStatic }: { isStatic?: boolean }) {
   return (
     <div
       className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-[#23184f] px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]"
@@ -92,7 +92,7 @@ function CardWhyOrizon({ isStatic }: { isStatic?: boolean }) {
         <div className="relative mt-12 aspect-[2.1/1] w-full overflow-hidden rounded-[20px] lg:absolute lg:-top-14 lg:right-0 lg:mt-0 lg:aspect-auto lg:h-[200px] lg:w-[49%] lg:max-w-[469px]">
           <img
             src={ASSETS.teamPhoto}
-            alt="The Orizon design team"
+            alt="The MaxVerse design team"
             className="absolute -left-[12%] top-0 h-[120%] w-[120%] max-w-none object-cover"
             loading="lazy"
           />
@@ -338,7 +338,7 @@ function CardPeopleLove() {
         <div className="mt-16 grid gap-12 lg:mt-[clamp(80px,18vh,160px)] lg:grid-cols-3 lg:gap-x-12">
           <div>
             <ColTitle>
-              &ldquo;Meeting with Orizon was our favorite part of the
+              &ldquo;Meeting with MaxVerse was our favorite part of the
               week!&rdquo;
             </ColTitle>
             <ColBody>
@@ -414,14 +414,14 @@ export function AboutCards() {
   return (
     <section className="relative pt-16 lg:pt-24">
       <div className="mx-auto mb-8 w-[90%] max-w-[1294px]">
-        <SectionLabel>Why Orizon</SectionLabel>
+        <SectionLabel>Why MaxVerse</SectionLabel>
       </div>
 
       {/* desktop: sticky stacked cards revealed on scroll */}
       <div ref={stackRef} className="relative hidden h-[300vh] lg:block">
         <div className="sticky top-0 h-screen overflow-hidden">
           <StickyCard y={y1} zIndex={30}>
-            <CardWhyOrizon />
+            <CardWhyMaxVerse />
           </StickyCard>
           <StickyCard y={y2} zIndex={20}>
             <CardGetThingsDone />
@@ -434,7 +434,7 @@ export function AboutCards() {
 
       {/* mobile / tablet: simple stacked cards */}
       <div className="mx-auto w-full space-y-5 px-5 sm:px-6 lg:hidden">
-        <CardWhyOrizon isStatic />
+        <CardWhyMaxVerse isStatic />
         <CardGetThingsDone isStatic />
         <CardPeopleLove />
       </div>

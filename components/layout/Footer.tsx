@@ -1,4 +1,4 @@
-import { OrizonLogo } from "@/components/ui/OrizonLogo";
+import { MaxVerseLogo } from "@/components/ui/MaxVerseLogo";
 import { GradientButton } from "@/components/ui/GradientButton";
 
 const COMPANY = [
@@ -6,7 +6,7 @@ const COMPANY = [
   "Services",
   "Our Work",
   "Engagements",
-  "Why Orizon",
+  "Why MaxVerse",
   "Design Subscription",
   "Careers",
   "Blog",
@@ -66,7 +66,7 @@ export function Footer() {
       <div className="mx-auto w-full max-w-[1200px] px-5 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_2fr]">
           <div>
-            <OrizonLogo />
+            <MaxVerseLogo />
             <p className="mt-6 max-w-xs text-[15px] leading-relaxed text-muted">
               We design world-class digital products and help startups &amp;
               Fortune 500 companies delight humans on the other side of the
@@ -106,7 +106,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col gap-4 border-t border-ink/5 pt-6 text-sm text-muted md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-            <span>© 2026 Orizon. All Rights Reserved.</span>
+            <span>© 2026 MaxVerse. All Rights Reserved.</span>
             <span className="flex gap-2">
               <a href="#" className="font-semibold text-primary-blue">
                 EN

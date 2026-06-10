@@ -117,7 +117,7 @@ export function Hero() {
             className="max-w-[32rem] min-[992px]:self-start min-[992px]:pt-2"
           >
             <p className="m-0 mt-5 text-base leading-[1.5] text-ink md:text-lg">
-              Orizon is a leading UX design agency based in Canada. We help
+              MaxVerse is a leading UX design agency based in Canada. We help
               startups &amp; Fortune 500 companies delight humans on the other
               side of the screen.
             </p>

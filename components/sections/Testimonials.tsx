@@ -34,7 +34,7 @@ const QUOTES: Quote[] = [
     imagePosition: "50% 0%",
     segments: [
       {
-        text: "Very few firms can make products look beautiful and work well at the same time, and that\u2019s what I love about Orizon!",
+        text: "Very few firms can make products look beautiful and work well at the same time, and that\u2019s what I love about MaxVerse!",
       },
     ],
     video:
@@ -48,7 +48,7 @@ const QUOTES: Quote[] = [
     logoWidth: 150,
     image: `${CDN}/628b84f57c55b942d17f8fbd_testimonial%20(1).avif`,
     segments: [
-      { text: "The Orizon team a) has been an absolute " },
+      { text: "The MaxVerse team a) has been an absolute " },
       { text: "pleasure", bold: true },
       { text: " to work with and b) done " },
       { text: "exceptional work", bold: true },
@@ -67,10 +67,10 @@ const QUOTES: Quote[] = [
     logoWidth: 96,
     image: `${CDN}/628b84f4e5012af6f1c0984c_testimonial%201%20(1).avif`,
     segments: [
-      { text: "Working with Orizon was truly a " },
+      { text: "Working with MaxVerse was truly a " },
       { text: "delightful experience", bold: true },
       {
-        text: ". From our kick-off meeting to our final delivery, Orizon has the ",
+        text: ". From our kick-off meeting to our final delivery, MaxVerse has the ",
       },
       { text: "creative depth", bold: true },
       {
@@ -88,7 +88,7 @@ const QUOTES: Quote[] = [
     logoWidth: 110,
     image: `${CDN}/628b84f5bec87d520fc49eb3_testimonial%203%20(1).avif`,
     segments: [
-      { text: "The Orizon team is excellent. They put in an " },
+      { text: "The MaxVerse team is excellent. They put in an " },
       { text: "incredible amount of effort", bold: true },
       {
         text: " on our project and delivered something we're really happy with. Would highly recommend.",
@@ -103,7 +103,7 @@ const QUOTES: Quote[] = [
     logoWidth: 110,
     image: `${CDN}/628b84f6cd9e566517ff4488_testimonial%204%20(1).avif`,
     segments: [
-      { text: "Could not be more impressed with Orizon! ", bold: true },
+      { text: "Could not be more impressed with MaxVerse! ", bold: true },
       { text: "Have worked with them for many projects now and am " },
       {
         text: "always blown away by their ability to bring our products to life.",
@@ -121,7 +121,7 @@ const QUOTES: Quote[] = [
     segments: [
       { text: "\u201CWe had " },
       { text: "many detailed requirements", bold: true },
-      { text: " for the new Telus Sky building which Orizon were " },
+      { text: " for the new Telus Sky building which MaxVerse were " },
       { text: "able to easily meet", bold: true },
       {
         text: ". They developed an MVP of the kiosk that focused on the most important features first. This made our employees and guests very satisfied thanks to the improved support, engagement, and navigation their system brought us.\u201D",
@@ -137,7 +137,7 @@ const QUOTES: Quote[] = [
     image: `${CDN}/628b84f7bec7d0a185b409dd_testimonial%206%20(1).avif`,
     segments: [
       {
-        text: "Orizon did a fantastic job \u2013 They turned a highly complex product into a simple but premium user experience. We really loved how they ",
+        text: "MaxVerse did a fantastic job \u2013 They turned a highly complex product into a simple but premium user experience. We really loved how they ",
       },
       { text: "fought for the best solution", bold: true },
       { text: " and due to the " },

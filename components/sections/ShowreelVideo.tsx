@@ -51,7 +51,7 @@ export function ShowreelVideo() {
             <button
               type="button"
               onClick={handlePlay}
-              aria-label="Play Orizon showreel"
+              aria-label="Play MaxVerse showreel"
               className="absolute inset-0 z-[2] cursor-pointer border-0 bg-transparent p-0"
             >
               <video

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { OrizonLogo } from "@/components/ui/OrizonLogo";
+import { MaxVerseLogo } from "@/components/ui/MaxVerseLogo";
 import { GradientButton } from "@/components/ui/GradientButton";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { useLenis } from "@/components/providers/SmoothScrollProvider";
@@ -74,7 +74,7 @@ export function Header() {
         >
           <motion.a
             href="#"
-            aria-label="Orizon home"
+            aria-label="MaxVerse home"
             className="relative z-10 overflow-hidden"
             animate={{
               opacity: showLogo ? 1 : 0,
@@ -83,7 +83,7 @@ export function Header() {
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
             style={{ pointerEvents: showLogo ? "auto" : "none" }}
           >
-            <OrizonLogo />
+            <MaxVerseLogo />
           </motion.a>
 
           <div className="flex items-center gap-3">

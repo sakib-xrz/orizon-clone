@@ -17,7 +17,7 @@ const NAV = [
 ] as const;
 
 const BOTTOM_LINKS = [
-  { label: "Why Orizon", href: "#why" },
+  { label: "Why MaxVerse", href: "#why" },
   { label: "Reviews", href: "#" },
   { label: "Careers", href: "#" },
   { label: "Subscription", href: "#" },

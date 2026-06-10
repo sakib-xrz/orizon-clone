@@ -218,7 +218,7 @@ function CardEvenMore() {
           <img
             key={src}
             src={src}
-            alt="A product designed by Orizon"
+            alt="A product designed by MaxVerse"
             className={`bottom-[-24px] left-[-5%] min-w-[110%] max-w-[110%] object-cover transition-opacity duration-700 ${
               i === activeIdx ? "relative opacity-100" : "absolute opacity-0"
             }`}

@@ -26,10 +26,10 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Orizon — UX Design Agency, Branding & Web Design",
+  title: "MaxVerse — UX Design Agency, Branding & Web Design",
   description:
-    "Orizon is a leading UX design agency based in Canada. We help startups & Fortune 500 companies delight humans on the other side of the screen.",
-  metadataBase: new URL("https://orizon-clone.local"),
+    "MaxVerse is a leading UX design agency based in Canada. We help startups & Fortune 500 companies delight humans on the other side of the screen.",
+  metadataBase: new URL("https://maxverse.local"),
 };
 
 export default function RootLayout({

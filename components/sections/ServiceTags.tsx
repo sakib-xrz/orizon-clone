@@ -69,14 +69,14 @@ export function ServiceTags() {
               <span>
                 Don&apos;t see it?{" "}
                 <a
-                  href="mailto:info@orizon.co?subject=Questions%20on%20additional%20services"
+                  href="mailto:info@maxverse.com?subject=Questions%20on%20additional%20services"
                   className="font-semibold text-primary-blue transition-opacity hover:opacity-80"
                 >
                   Ask us
                 </a>
               </span>
               <a
-                href="mailto:info@orizon.co?subject=Questions%20on%20additional%20services"
+                href="mailto:info@maxverse.com?subject=Questions%20on%20additional%20services"
                 className="flex h-8 items-center pl-3"
                 aria-label="Email us about additional services"
               >
