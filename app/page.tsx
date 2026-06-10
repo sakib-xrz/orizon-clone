@@ -27,9 +27,9 @@ export default function Home() {
         <AboutCards />
         <Services />
         <ServiceTags />
-        <DeepUx />
+        {/* <DeepUx />
         <TrustedBy />
-        <CtaSection />
+        <CtaSection /> */}
       </main>
       <Footer />
     </>

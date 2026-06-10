@@ -68,11 +68,11 @@ export function ShowreelVideo() {
             </button>
           )}
 
-          <motion.div
+          {/* <motion.div
             aria-hidden
             className="pointer-events-none absolute -bottom-[10%] -left-[5%] z-[3] h-[150%] w-[110%] origin-bottom bg-white"
             style={{ scaleY: maskScale }}
-          />
+          /> */}
         </div>
       </div>
     </section>
