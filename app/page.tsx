@@ -24,16 +24,16 @@ export default function Home() {
         <ShowreelVideo />
         <LogoStrip />
         <FeaturedProjects />
-        <Engagements />
-        <Testimonials />
-        <WhyOrizon />
-        <GetThingsDone />
-        <PeopleLove />
-        <Services />
-        <ServiceTags />
-        <DeepUx />
-        <TrustedBy />
-        <CtaSection />
+        {/* <Engagements />
+          <Testimonials />
+          <WhyOrizon />
+          <GetThingsDone />
+          <PeopleLove />
+          <Services />
+          <ServiceTags />
+          <DeepUx />
+          <TrustedBy />
+          <CtaSection /> */}
       </main>
       <Footer />
     </>
