@@ -36,6 +36,8 @@ const MORE_IMAGES = [
   `${CDN}/66b0e6d6a51f637eb02ac643_Frame%201410127005%20(1).webp`,
 ];
 
+const bgImage = (src: string) => `url("${src}")`;
+
 const BIG_CARD =
   "relative z-[1] flex w-[300px] flex-none flex-col overflow-hidden rounded-[20px] bg-cover bg-no-repeat text-white md:w-[420px]";
 
@@ -79,7 +81,7 @@ function CardUiUx() {
     <a
       href="#services"
       className={`${BIG_CARD} justify-between shadow-[17px_17px_40px_1px_rgba(125,64,164,0.2)] md:w-[440px] md:shadow-[34px_34px_60px_1px_rgba(125,64,164,0.2)]`}
-      style={{ backgroundImage: `url(${BG.uiux})` }}
+      style={{ backgroundColor: "#21113a", backgroundImage: bgImage(BG.uiux) }}
     >
       <div className="relative z-[2] px-6 pt-10 md:px-12 md:pt-11">
         <CardTitle>UI/UX Design</CardTitle>
@@ -105,7 +107,11 @@ function CardSpatial() {
     <a
       href="#services"
       className={`${BIG_CARD} justify-between pt-3.5 shadow-[17px_17px_40px_1px_rgba(88,74,62,0.2)] md:shadow-[34px_34px_60px_1px_rgba(88,74,62,0.2)]`}
-      style={{ backgroundImage: `url(${BG.spatial})`, backgroundPosition: "50% 0" }}
+      style={{
+        backgroundColor: "#17110d",
+        backgroundImage: bgImage(BG.spatial),
+        backgroundPosition: "50% 0",
+      }}
     >
       <div className="relative">
         <img
@@ -130,7 +136,7 @@ function CardMobileApp() {
     <a
       href="#services"
       className={`${BIG_CARD} justify-between shadow-[17px_17px_40px_1px_rgba(48,86,202,0.2)] md:shadow-[34px_34px_60px_1px_rgba(48,86,202,0.2)]`}
-      style={{ backgroundImage: `url(${BG.mobileApp})` }}
+      style={{ backgroundColor: "#2458e8", backgroundImage: bgImage(BG.mobileApp) }}
     >
       <div className="relative z-[2] px-6 pt-10 md:px-12 md:pt-11">
         <CardTitle>Mobile App Design</CardTitle>
@@ -156,7 +162,7 @@ function CardWeb3() {
     <a
       href="#services"
       className={`${BIG_CARD} shadow-[17px_17px_40px_1px_rgba(103,103,111,0.2)] md:shadow-[34px_34px_60px_1px_rgba(103,103,111,0.2)]`}
-      style={{ backgroundImage: `url(${BG.web3})` }}
+      style={{ backgroundColor: "#22232b", backgroundImage: bgImage(BG.web3) }}
     >
       <div className="relative z-[2] px-6 pt-10 md:px-12 md:pt-11">
         <CardTitle>Web 3.0 Design &amp; NFTs</CardTitle>
@@ -192,7 +198,11 @@ function CardEvenMore() {
     <a
       href="#services"
       className={`${BIG_CARD} items-center text-center shadow-[17px_17px_40px_1px_rgba(2,2,2,0.2)] md:shadow-[34px_34px_60px_1px_rgba(2,2,2,0.2)]`}
-      style={{ backgroundImage: `url(${BG.more})`, backgroundPosition: "50% 0" }}
+      style={{
+        backgroundColor: "#020202",
+        backgroundImage: bgImage(BG.more),
+        backgroundPosition: "50% 0",
+      }}
     >
       <div className="relative z-[2] flex flex-col items-center px-6 pt-10 md:px-12 md:pt-11">
         <CardTitle>And even more...</CardTitle>
@@ -228,7 +238,7 @@ function CardLanding() {
     <a
       href="#services"
       className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(105,31,116,0.25)] md:shadow-[34px_34px_60px_1px_rgba(82,63,195,0.2)]`}
-      style={{ backgroundImage: `url(${BG.landing})` }}
+      style={{ backgroundColor: "#523fc3", backgroundImage: bgImage(BG.landing) }}
     >
       <div className="absolute inset-0" aria-hidden="true">
         <img
@@ -260,7 +270,11 @@ function CardAi() {
     <a
       href="#services"
       className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(10,53,127,0.2)] md:shadow-[34px_34px_60px_1px_rgba(206,79,148,0.2)]`}
-      style={{ backgroundImage: `url(${BG.ai})`, backgroundPosition: "0%" }}
+      style={{
+        backgroundColor: "#ce4f94",
+        backgroundImage: bgImage(BG.ai),
+        backgroundPosition: "0%",
+      }}
     >
       <div className="absolute inset-0" aria-hidden="true">
         <img
@@ -310,7 +324,11 @@ function CardDesignSystem() {
     <a
       href="#services"
       className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(10,53,127,0.2)] md:shadow-[34px_34px_60px_1px_rgba(47,77,184,0.2)]`}
-      style={{ backgroundImage: `url(${BG.designSystem})`, backgroundPosition: "0 0" }}
+      style={{
+        backgroundColor: "#2f4db8",
+        backgroundImage: bgImage(BG.designSystem),
+        backgroundPosition: "0 0",
+      }}
     >
       <div className="absolute inset-0" aria-hidden="true">
         <img
