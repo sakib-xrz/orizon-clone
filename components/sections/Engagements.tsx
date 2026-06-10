@@ -51,7 +51,7 @@ function FeatureCard({ card, index }: { card: Card; index: number }) {
   return (
     <Reveal delay={index * 0.1}>
       <article className="relative w-full overflow-hidden rounded-[20px] max-lg:pb-[67%] max-lg:min-h-0 max-sm:min-h-[550px] lg:min-h-[720px]">
-        <div className="relative z-[2] flex w-full flex-col items-start px-4 md:px-7">
+        <div className="relative z-[2] flex w-full flex-col items-start px-4 pt-7 md:px-7">
           <p className="mb-2 text-xl font-normal leading-6 text-ink">
             {card.eyebrow}
           </p>
