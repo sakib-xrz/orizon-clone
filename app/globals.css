@@ -5,6 +5,7 @@
 @layer components {
   .featured-projects-track {
     --fp-inset: 1.5rem;
+    padding-inline: var(--fp-inset);
     scroll-padding-left: var(--fp-inset);
   }
 
@@ -18,11 +19,5 @@
     .featured-projects-track {
       --fp-inset: max(50px, calc((100vw - 1160px) / 2 + 50px));
     }
-  }
-
-  .featured-projects-spacer {
-    flex-shrink: 0;
-    width: var(--fp-inset);
-    height: 1px;
   }
 }

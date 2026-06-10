@@ -282,12 +282,10 @@ export function FeaturedProjects() {
           onScroll={onScroll}
           className="featured-projects-track flex w-full gap-3 overflow-x-auto pb-4 [scrollbar-width:none] max-md:snap-x max-md:snap-mandatory min-[480px]:gap-6 md:gap-6 lg:gap-10 [&::-webkit-scrollbar]:hidden"
         >
-          <div aria-hidden className="featured-projects-spacer" />
           {CASE_STUDIES.map((study) => (
             <CaseStudyCard key={study.href} study={study} />
           ))}
           <ViewMoreCard />
-          <div aria-hidden className="featured-projects-spacer md:hidden" />
         </div>
       </Reveal>
 
