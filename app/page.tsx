@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
+import { ShowreelVideo } from "@/components/sections/ShowreelVideo";
 import { LogoStrip } from "@/components/sections/LogoStrip";
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import { Engagements } from "@/components/sections/Engagements";
@@ -20,6 +21,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <ShowreelVideo />
         <LogoStrip />
         <FeaturedProjects />
         <Engagements />
