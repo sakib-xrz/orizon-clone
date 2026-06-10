@@ -5,6 +5,7 @@
 @layer components {
   .featured-projects-track {
     --fp-inset: 1.5rem;
+    scroll-padding-left: var(--fp-inset);
   }
 
   @media (min-width: 480px) {

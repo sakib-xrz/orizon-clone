@@ -280,17 +280,13 @@ export function FeaturedProjects() {
         <div
           ref={trackRef}
           onScroll={onScroll}
-          className="featured-projects-track flex w-full snap-x snap-mandatory gap-3 overflow-x-auto pb-4 [scrollbar-width:none] min-[480px]:gap-6 md:gap-6 lg:gap-10 [&::-webkit-scrollbar]:hidden"
+          className="featured-projects-track flex w-full gap-3 overflow-x-auto pb-4 [scrollbar-width:none] max-md:snap-x max-md:snap-mandatory min-[480px]:gap-6 md:gap-6 lg:gap-10 [&::-webkit-scrollbar]:hidden"
         >
           <div aria-hidden className="featured-projects-spacer" />
-          {CASE_STUDIES.map((study, index) => (
-            <CaseStudyCard
-              key={study.href}
-              study={study}
-              snapStart={index > 0}
-            />
+          {CASE_STUDIES.map((study) => (
+            <CaseStudyCard key={study.href} study={study} />
           ))}
-          <ViewMoreCard snapStart />
+          <ViewMoreCard />
           <div aria-hidden className="featured-projects-spacer md:hidden" />
         </div>
       </Reveal>
@@ -324,13 +320,7 @@ export function FeaturedProjects() {
   );
 }
 
-function CaseStudyCard({
-  study,
-  snapStart = false,
-}: {
-  study: CaseStudy;
-  snapStart?: boolean;
-}) {
+function CaseStudyCard({ study }: { study: CaseStudy }) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleEnter = () => {
@@ -349,7 +339,7 @@ function CaseStudyCard({
   return (
     <Link
       href={study.href}
-      className={`group relative block shrink-0 ${snapStart ? "snap-start" : ""} ${CARD_WIDTH}`}
+      className={`group relative block shrink-0 max-md:snap-start ${CARD_WIDTH}`}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
     >
@@ -427,11 +417,11 @@ function CaseStudyCard({
   );
 }
 
-function ViewMoreCard({ snapStart = false }: { snapStart?: boolean }) {
+function ViewMoreCard() {
   return (
     <Link
       href="/work"
-      className={`group relative block shrink-0 ${snapStart ? "snap-start" : ""} ${CARD_WIDTH}`}
+      className={`group relative block shrink-0 max-md:snap-start ${CARD_WIDTH}`}
     >
       <div
         className={`relative flex w-full flex-col overflow-hidden rounded-[20px] bg-cover bg-center bg-no-repeat text-center text-white ${CARD_HEIGHT}`}
