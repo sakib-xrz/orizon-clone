@@ -56,22 +56,85 @@ const SOCIAL = [
   },
 ] as const;
 
-function NavChevron({ active }: { active: boolean }) {
+const PANEL_EASE = [0.22, 1, 0.36, 1] as const;
+
+const staggerContainer = {
+  closed: {},
+  open: {
+    transition: { staggerChildren: 0.055, delayChildren: 0.12 },
+  },
+};
+
+const staggerItem = {
+  closed: { opacity: 0, y: 24 },
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.45, ease: PANEL_EASE },
+  },
+};
+
+function NavItem({
+  label,
+  index,
+  href,
+  active,
+  onClose,
+}: {
+  label: string;
+  index: string;
+  href: string;
+  active: boolean;
+  onClose: () => void;
+}) {
   return (
-    <span
-      className={`relative flex h-7 w-7 shrink-0 items-center justify-center rounded-full ${
-        active ? "bg-primary-blue text-white" : "bg-ink/[0.04] text-ink"
-      }`}
-      aria-hidden="true"
+    <motion.a
+      variants={staggerItem}
+      href={href}
+      onClick={onClose}
+      className="group block px-[0.9375rem] py-1 text-inherit no-underline min-[480px]:p-0"
     >
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-        <path
-          d="M10.9766 9.99999L6.85156 5.87499L8.0299 4.69666L13.3332 9.99999L8.0299 15.3033L6.85156 14.125L10.9766 9.99999Z"
-          fill="currentColor"
-        />
-      </svg>
-      <span className="pointer-events-none absolute inset-0 rounded-full bg-[linear-gradient(162deg,rgba(255,255,255,0.1)_11%,rgba(255,255,255,0.02))] opacity-50" />
-    </span>
+      <span className="flex cursor-pointer items-stretch justify-between gap-[0.21875rem]">
+        <span
+          className={`m-0 text-[2rem] font-normal leading-[1.5] tracking-[-1.2px] transition-colors duration-200 ${
+            active ? "text-ink" : "text-ink/40 group-hover:text-ink"
+          }`}
+        >
+          {label}
+        </span>
+
+        {/* Index counter — slides into view on hover (always visible on active) */}
+        <span className="mr-auto h-5 overflow-hidden" aria-hidden="true">
+          <span
+            className={`block text-sm font-medium leading-5 tracking-[-0.08px] text-gray-500 transition-transform duration-300 ease-[cubic-bezier(0.77,0,0.175,1)] ${
+              active
+                ? "translate-y-0"
+                : "translate-y-full group-hover:translate-y-0"
+            }`}
+          >
+            {index}
+          </span>
+        </span>
+
+        {/* Chevron — plain on desktop idle, gray pill on mobile, blue pill on hover/active */}
+        <span
+          className={`relative flex h-7 w-7 shrink-0 items-center justify-center self-center rounded-full transition-colors duration-200 ease-[cubic-bezier(0.77,0,0.175,1)] ${
+            active
+              ? "bg-primary-blue text-white"
+              : "bg-ink/[0.04] text-ink group-hover:bg-primary-blue group-hover:text-white min-[480px]:bg-transparent min-[480px]:group-hover:bg-primary-blue"
+          }`}
+          aria-hidden="true"
+        >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path
+              d="M10.9766 9.99999L6.85156 5.87499L8.0299 4.69666L13.3332 9.99999L8.0299 15.3033L6.85156 14.125L10.9766 9.99999Z"
+              fill="currentColor"
+            />
+          </svg>
+          <span className="pointer-events-none absolute inset-0 rounded-full bg-[linear-gradient(162deg,rgba(255,255,255,0.1)_11%,rgba(255,255,255,0.02))] opacity-50" />
+        </span>
+      </span>
+    </motion.a>
   );
 }
 
@@ -84,7 +147,7 @@ export function MobileMenu({
 }) {
   const pathname = usePathname();
   const lenis = useLenis();
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 479px)");
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     if (lenis) {
@@ -117,7 +180,7 @@ export function MobileMenu({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[70] cursor-default border-0 bg-transparent p-0 md:bg-ink/40 md:backdrop-blur-lg"
+            className="fixed inset-0 z-[70] cursor-default border-0 bg-transparent p-0 min-[480px]:bg-ink/40 min-[480px]:backdrop-blur-lg"
             aria-label="Close menu"
             onClick={onClose}
           />
@@ -126,18 +189,40 @@ export function MobileMenu({
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "spring", stiffness: 260, damping: 30 }}
-            className="fixed inset-y-0 right-0 z-[80] h-dvh w-full max-w-full overflow-hidden bg-white md:w-[60vw] md:max-w-[520px] md:rounded-l-[20px]"
+            transition={{ duration: 0.5, ease: PANEL_EASE }}
+            className="fixed inset-y-0 right-0 z-[80] h-dvh w-full max-w-full overflow-hidden bg-white min-[480px]:w-[420px] min-[480px]:rounded-l-[20px] min-[480px]:py-[1.1rem] min-[992px]:w-[500px]"
             role="dialog"
             aria-modal="true"
             aria-label="Site navigation"
             onClick={(e) => e.stopPropagation()}
           >
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Close menu"
+              className="absolute right-5 top-4 z-[2] flex size-12 items-center justify-center rounded-full border-0 bg-white text-ink shadow-md transition-transform duration-200 hover:scale-105 min-[480px]:right-12 min-[480px]:top-6 min-[480px]:size-14 min-[480px]:bg-ink/[0.04] min-[480px]:shadow-none"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 4l10 10M14 4L4 14"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+
             <div
-              className="flex h-full flex-col overflow-y-auto px-2.5 pb-10 pt-0 md:pt-16"
+              className="flex h-full flex-col overflow-y-auto px-2.5 pb-10 pt-0 min-[480px]:px-12 min-[480px]:pb-6 min-[480px]:pt-[6.5875rem] min-[992px]:px-[5.5rem]"
               data-lenis-prevent
             >
-              <div className="block h-[230px] w-full flex-none overflow-hidden rounded-[1.25rem] md:hidden">
+              <div className="block h-[230px] w-full flex-none overflow-hidden rounded-[1.25rem] min-[480px]:hidden">
                 <Image
                   src="/side-nav-mobile.avif"
                   alt=""
@@ -148,79 +233,42 @@ export function MobileMenu({
                 />
               </div>
 
-              <div className="mx-auto w-full max-w-sm flex-1 px-[0.975rem] pt-4 md:pt-0">
-                <button
-                  type="button"
-                  onClick={onClose}
-                  aria-label="Close menu"
-                  className="absolute right-5 top-4 z-[2] flex size-12 shadow-md items-center justify-center rounded-full border-0 bg-white text-ink transition-transform duration-200 hover:scale-105 md:-top-12"
-                >
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M4 4l10 10M14 4L4 14"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </button>
-
+              <motion.div
+                variants={staggerContainer}
+                initial="closed"
+                animate="open"
+                className="flex w-full flex-1 flex-col px-[1.575rem] pt-8 min-[480px]:w-[324px] min-[480px]:p-0"
+              >
                 <nav
-                  className="-mx-[0.9375rem] mt-5 flex w-[calc(100%+1.875rem)] flex-col gap-2"
+                  className="-mx-[0.9375rem] flex w-[calc(100%+1.875rem)] flex-col gap-2 min-[480px]:mx-0 min-[480px]:w-full min-[480px]:gap-4"
                   aria-label="Primary"
                 >
-                  {NAV.map((item) => {
-                    const active = isActive(item.href);
-                    return (
-                      <a
-                        key={item.label}
-                        href={item.href}
-                        onClick={onClose}
-                        className="block px-[0.9375rem] py-1 text-inherit no-underline"
-                      >
-                        <span className="flex cursor-pointer items-center justify-between gap-[0.21875rem]">
-                          <span className="flex min-w-0 items-baseline gap-[0.21875rem]">
-                            <span
-                              className={`m-0 text-[2rem] font-normal leading-[1.5] tracking-normal ${
-                                active ? "text-ink" : "text-ink/[0.38]"
-                              }`}
-                            >
-                              {item.label}
-                            </span>
-                            {active && (
-                              <span className="mt-[0.4rem] self-start">
-                                <span className="block text-sm font-medium leading-none tracking-normal text-gray-500">
-                                  {item.index}
-                                </span>
-                              </span>
-                            )}
-                          </span>
-                          <NavChevron active={active} />
-                        </span>
-                      </a>
-                    );
-                  })}
+                  {NAV.map((item) => (
+                    <NavItem
+                      key={item.label}
+                      label={item.label}
+                      index={item.index}
+                      href={item.href}
+                      active={isActive(item.href)}
+                      onClose={onClose}
+                    />
+                  ))}
                 </nav>
 
-                <div
+                <motion.div
+                  variants={staggerItem}
                   className="mt-8 h-px w-full bg-[linear-gradient(90deg,#0f0928,rgba(15,9,40,0.18))] opacity-[0.08]"
                   aria-hidden="true"
                 />
 
-                <div className="mt-0">
-                  <p className="mb-5 mt-5 text-xl font-normal leading-[1.4] text-ink">
+                <motion.div variants={staggerItem} className="mt-8">
+                  <p className="mb-5 text-xl font-normal leading-[1.4] text-ink">
                     Have a project for us?
                   </p>
                   <GradientButton
                     href="#contact"
                     media={isMobile ? "arrow" : "avatars"}
-                    className="w-full justify-between"
+                    className="w-full justify-between min-[480px]:w-auto"
                   >
                     Let&apos;s talk
                   </GradientButton>
@@ -238,22 +286,26 @@ export function MobileMenu({
                       </a>
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
-                <div
+                <motion.div
+                  variants={staggerItem}
                   className="mt-8 h-px w-full bg-[linear-gradient(90deg,#0f0928,rgba(15,9,40,0.18))] opacity-[0.08]"
                   aria-hidden="true"
                 />
 
-                <div className="-ml-1.5 mr-1.5 mt-8 grid w-[calc(100%+12px)] grid-cols-2 gap-2">
+                <motion.div
+                  variants={staggerItem}
+                  className="-ml-1.5 mr-1.5 mt-8 grid w-[calc(100%+12px)] grid-cols-2 gap-2 min-[480px]:mx-0 min-[480px]:w-full min-[480px]:gap-4"
+                >
                   {BOTTOM_LINKS.map((item) => (
                     <a
                       key={item.label}
                       href={item.href}
                       onClick={onClose}
-                      className="px-1.5 py-1 text-inherit no-underline"
+                      className="p-1.5 text-inherit no-underline min-[480px]:p-0"
                     >
-                      <span className="flex items-center gap-1 text-sm leading-[1.5] text-ink">
+                      <span className="flex items-center gap-1 text-base leading-[1.5] text-ink">
                         <span>{item.label}</span>
                         <Image
                           src="/chevron-right.svg"
@@ -266,10 +318,13 @@ export function MobileMenu({
                       </span>
                     </a>
                   ))}
-                </div>
+                </motion.div>
 
-                <div className="mt-8 pt-6">
-                  <div className="flex w-full items-center justify-between px-1">
+                <motion.div
+                  variants={staggerItem}
+                  className="flex flex-1 flex-col justify-end"
+                >
+                  <div className="mt-8 flex w-full items-center justify-between p-6">
                     {SOCIAL.map((item) => (
                       <a
                         key={item.label}
@@ -290,8 +345,8 @@ export function MobileMenu({
                       </a>
                     ))}
                   </div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             </div>
           </motion.aside>
         </>
