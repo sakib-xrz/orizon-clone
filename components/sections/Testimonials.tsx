@@ -37,7 +37,8 @@ const QUOTES: Quote[] = [
         text: "Very few firms can make products look beautiful and work well at the same time, and that\u2019s what I love about Orizon!",
       },
     ],
-    video: "https://dl.dropboxusercontent.com/s/5kgbgonjt0npp2c/Sean%20Rad.MOV?dl=0",
+    video:
+      "https://dl.dropboxusercontent.com/s/5kgbgonjt0npp2c/Sean%20Rad.MOV?dl=0",
   },
   {
     name: "Bryan Johnson",
@@ -51,7 +52,9 @@ const QUOTES: Quote[] = [
       { text: "pleasure", bold: true },
       { text: " to work with and b) done " },
       { text: "exceptional work", bold: true },
-      { text: ". We gave them an impossible deadline, and even with that, they " },
+      {
+        text: ". We gave them an impossible deadline, and even with that, they ",
+      },
       { text: "gave us more optionality, design iterations", bold: true },
       { text: " and degrees of freedom than could be reasonably asked for!" },
     ],
@@ -66,7 +69,9 @@ const QUOTES: Quote[] = [
     segments: [
       { text: "Working with Orizon was truly a " },
       { text: "delightful experience", bold: true },
-      { text: ". From our kick-off meeting to our final delivery, Orizon has the " },
+      {
+        text: ". From our kick-off meeting to our final delivery, Orizon has the ",
+      },
       { text: "creative depth", bold: true },
       {
         text: " to go from an idea to a fully packaged and branded deliverable. Their design commitment always focuses on brand and impact - which is very refreshing. On top of that, they are ",
@@ -184,10 +189,18 @@ function ArrowButton({
   return (
     <button
       onClick={onClick}
-      aria-label={direction === "left" ? "Previous testimonial" : "Next testimonial"}
+      aria-label={
+        direction === "left" ? "Previous testimonial" : "Next testimonial"
+      }
       className="flex h-12 w-12 items-center justify-center rounded-full border border-button-border/70 bg-white text-primary-blue transition hover:border-primary-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 lg:h-[58px] lg:w-[58px]"
     >
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        aria-hidden="true"
+      >
         <path
           d={direction === "left" ? "M10 3L5 8l5 5" : "M6 3l5 5-5 5"}
           stroke="currentColor"
@@ -228,7 +241,13 @@ function VideoLightbox({ src, onClose }: { src: string; onClose: () => void }) {
         aria-label="Close video"
         className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-button-border/70 bg-white text-ink transition hover:border-primary-blue hover:text-primary-blue"
       >
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          aria-hidden="true"
+        >
           <path
             d="M2 2l10 10M12 2L2 12"
             stroke="currentColor"
@@ -253,9 +272,6 @@ function VideoLightbox({ src, onClose }: { src: string; onClose: () => void }) {
           playsInline
           className="max-h-[68vh] w-auto max-w-[92vw] bg-black shadow-soft"
         />
-        <GradientButton href="#contact" variant="compact">
-          Contact us
-        </GradientButton>
       </motion.div>
     </motion.div>
   );
@@ -311,7 +327,9 @@ export function Testimonials() {
                     q.video ? "" : "pointer-events-none"
                   }`}
                   aria-label={
-                    q.video ? `Play video testimonial from ${q.name}` : undefined
+                    q.video
+                      ? `Play video testimonial from ${q.name}`
+                      : undefined
                   }
                   tabIndex={q.video ? 0 : -1}
                 >
@@ -428,7 +446,9 @@ export function Testimonials() {
                       aria-label={`Show testimonial ${i + 1} of ${QUOTES.length}`}
                       aria-current={i === idx}
                       className={`h-1.5 rounded-full transition-all duration-300 ${
-                        i === idx ? "w-5 bg-white" : "w-1.5 bg-white/50 hover:bg-white/80"
+                        i === idx
+                          ? "w-5 bg-white"
+                          : "w-1.5 bg-white/50 hover:bg-white/80"
                       }`}
                     />
                   ))}

@@ -6,9 +6,7 @@ import { LogoStrip } from "@/components/sections/LogoStrip";
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import { Engagements } from "@/components/sections/Engagements";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { WhyOrizon } from "@/components/sections/WhyOrizon";
-import { GetThingsDone } from "@/components/sections/GetThingsDone";
-import { PeopleLove } from "@/components/sections/PeopleLove";
+import { AboutCards } from "@/components/sections/AboutCards";
 import { Services } from "@/components/sections/Services";
 import { ServiceTags } from "@/components/sections/ServiceTags";
 import { DeepUx } from "@/components/sections/DeepUx";
@@ -26,9 +24,7 @@ export default function Home() {
         <FeaturedProjects />
         <Engagements />
         <Testimonials />
-        <WhyOrizon />
-        <GetThingsDone />
-        <PeopleLove />
+        <AboutCards />
         <Services />
         <ServiceTags />
         <DeepUx />

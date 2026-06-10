@@ -41,7 +41,7 @@ export function ShowreelVideo() {
             className="h-[102%] w-full -translate-y-[1%] scale-[1.03] object-cover"
             poster={POSTER}
             playsInline
-            preload="none"
+            preload="true"
             onEnded={() => setIsPlaying(false)}
           >
             <source src={VIDEO_SRC} type="video/mp4" />
@@ -61,7 +61,7 @@ export function ShowreelVideo() {
                 loop
                 muted
                 playsInline
-                preload="none"
+                preload="true"
               >
                 <source src={VIDEO_SRC} type="video/mp4" />
               </video>
