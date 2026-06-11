@@ -65,7 +65,7 @@ export function Hero() {
               {slide.starsFirst ? (
                 <>
                   <span
-                    className="text-xs tracking-[0.05em] text-[#f5a623]"
+                    className="text-xs tracking-[0.05em] text-primary-blue"
                     aria-hidden="true"
                   >
                     ★★★★★
@@ -94,10 +94,10 @@ export function Hero() {
           >
             <h1 className="m-0 font-display text-[40px] font-semibold leading-[1.05] tracking-normal text-ink min-[480px]:text-5xl md:text-[56px] min-[992px]:text-[64px] xl:text-[80px]">
               <span className="flex flex-wrap gap-x-3">
-                <span className="bg-[url('/heading-gradient.svg')] bg-cover bg-center bg-repeat bg-clip-text text-transparent">
+                <span className="bg-heading-gradient bg-clip-text text-transparent">
                   We
                 </span>
-                <span className="bg-[url('/heading-gradient.svg')] bg-cover bg-center bg-repeat bg-clip-text text-transparent">
+                <span className="bg-heading-gradient bg-clip-text text-transparent">
                   make
                 </span>
                 <span>apps,</span>

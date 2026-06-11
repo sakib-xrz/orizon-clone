@@ -4,10 +4,10 @@
  * headshots if licensed. See public/README-ASSETS.md.
  */
 const GRADIENTS = [
-  ["#f6a6c1", "#c46f9b"],
-  ["#9aa6ff", "#5a63e0"],
-  ["#ffd29a", "#e08a4f"],
-  ["#9ee0d0", "#4fae9a"],
+  ["#00F8FF", "#00D4DC"],
+  ["#8EFDFF", "#00F8FF"],
+  ["#00D4DC", "#00A8B0"],
+  ["#00F8FF", "#8EFDFF"],
 ];
 
 export function AvatarStack({

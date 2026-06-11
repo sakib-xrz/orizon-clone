@@ -100,13 +100,15 @@ export function Header() {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
-              className="relative z-[90] flex h-[3.25rem] w-[3.25rem] shrink-0 items-center justify-center overflow-hidden rounded-full border-0 bg-[linear-gradient(#fff,rgba(255,255,255,0.55))] p-0 shadow-[-22px_-27px_40px_4px_rgba(96,96,116,0.2),22px_27px_40px_4px_rgba(96,96,116,0.14)] transition-transform duration-200 hover:scale-[1.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              className={`relative z-[90] flex h-[3.25rem] w-[3.25rem] shrink-0 items-center justify-center overflow-hidden rounded-full border border-primary-blue p-0 shadow-[-22px_-27px_40px_4px_rgba(96,96,116,0.2),22px_27px_40px_4px_rgba(96,96,116,0.14)] transition-[transform,background-color] duration-200 hover:scale-[1.04] hover:bg-primary-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 focus-visible:ring-offset-white ${
+                open ? "bg-primary-blue" : "bg-[linear-gradient(#fff,rgba(255,255,255,0.55))]"
+              }`}
             >
               <span className="absolute inset-0 rounded-full bg-white/30 backdrop-blur-[7px]" aria-hidden="true" />
               <span className="relative flex h-full w-full flex-col items-center justify-center">
                 <span className="absolute inset-0 rounded-full bg-ink/[0.04] opacity-50" aria-hidden="true" />
-                <span className="relative mb-[5px] block h-0.5 w-5 rounded bg-primary-blue" />
-                <span className="relative block h-0.5 w-5 rounded bg-primary-blue" />
+                <span className="relative mb-[5px] block h-0.5 w-5 rounded bg-ink" />
+                <span className="relative block h-0.5 w-5 rounded bg-ink" />
               </span>
             </button>
           </div>

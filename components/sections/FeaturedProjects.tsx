@@ -26,12 +26,12 @@ type CaseStudy = {
 };
 
 const SHADOW_COLORS: Record<ShadowVariant, string> = {
-  purple: "bg-[#006B7366]",
-  blue: "bg-[#00798066]",
+  purple: "bg-[#00F8FF33]",
+  blue: "bg-[#00F8FF40]",
   gray: "bg-[#29292966]",
-  green: "bg-[#00AEB84d]",
+  green: "bg-[#00F8FF4d]",
   dark: "bg-[#18181966]",
-  navy: "bg-[#005F6666]",
+  navy: "bg-[#00F8FF26]",
 };
 
 const CASE_STUDIES: CaseStudy[] = [
@@ -60,7 +60,7 @@ const CASE_STUDIES: CaseStudy[] = [
     video:
       "https://dl.dropboxusercontent.com/scl/fi/s70zpzc2r7wf9edscgn1c/Orizon_Showreel_Travelwise_new-2026.mp4?rlkey=8r5l13v9l8wlt2w4awvuefhgi&st=5s4xizd6&dl=0",
     backgroundImage: `${CDN}/6a0cdcdbaf6cd7e191095e50_case%20study%20card%20(1).avif`,
-    backgroundColor: "#007980",
+    backgroundColor: "#00F8FF",
     shadow: "blue",
     mockupClassName: "relative -bottom-10 left-[5%]",
   },
@@ -468,7 +468,7 @@ function CarouselArrow({
       type="button"
       onClick={onClick}
       aria-label={direction === "left" ? "Previous projects" : "Next projects"}
-      className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-blue bg-white text-primary-blue transition hover:border-primary-blue hover:bg-primary-blue hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
+      className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-blue bg-white text-ink transition hover:border-primary-blue hover:bg-primary-blue hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
     >
       <svg
         width="16"

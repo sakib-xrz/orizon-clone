@@ -82,8 +82,8 @@ function CardUiUx() {
   return (
     <a
       href="#services"
-      className={`${BIG_CARD} justify-between shadow-[17px_17px_40px_1px_rgba(0,121,128,0.2)] md:w-[440px] md:shadow-[34px_34px_60px_1px_rgba(0,121,128,0.2)]`}
-      style={{ backgroundColor: "#064248", backgroundImage: bgImage(BG.uiux) }}
+      className={`${BIG_CARD} justify-between shadow-[17px_17px_40px_1px_rgba(0,248,255,0.2)] md:w-[440px] md:shadow-[34px_34px_60px_1px_rgba(0,248,255,0.2)]`}
+      style={{ backgroundColor: "#00A8B0", backgroundImage: bgImage(BG.uiux) }}
     >
       <div className="relative z-[2] px-6 pt-10 md:px-12 md:pt-11">
         <CardTitle>UI/UX Design</CardTitle>
@@ -137,9 +137,9 @@ function CardMobileApp() {
   return (
     <a
       href="#services"
-      className={`${BIG_CARD} justify-between shadow-[17px_17px_40px_1px_rgba(0,121,128,0.2)] md:shadow-[34px_34px_60px_1px_rgba(0,121,128,0.2)]`}
+      className={`${BIG_CARD} justify-between shadow-[17px_17px_40px_1px_rgba(0,248,255,0.2)] md:shadow-[34px_34px_60px_1px_rgba(0,248,255,0.2)]`}
       style={{
-        backgroundColor: "#007980",
+        backgroundColor: "#00F8FF",
         backgroundImage: bgImage(BG.mobileApp),
       }}
     >
@@ -242,9 +242,9 @@ function CardLanding() {
   return (
     <a
       href="#services"
-      className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(0,121,128,0.25)] md:shadow-[34px_34px_60px_1px_rgba(0,121,128,0.2)]`}
+      className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(0,248,255,0.25)] md:shadow-[34px_34px_60px_1px_rgba(0,248,255,0.2)]`}
       style={{
-        backgroundColor: "#007980",
+        backgroundColor: "#00D4DC",
         backgroundImage: bgImage(BG.landing),
       }}
     >
@@ -277,9 +277,9 @@ function CardAi() {
   return (
     <a
       href="#services"
-      className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(0,121,128,0.2)] md:shadow-[34px_34px_60px_1px_rgba(0,121,128,0.2)]`}
+      className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(0,248,255,0.2)] md:shadow-[34px_34px_60px_1px_rgba(0,248,255,0.2)]`}
       style={{
-        backgroundColor: "#00AEB8",
+        backgroundColor: "#00F8FF",
         backgroundImage: bgImage(BG.ai),
         backgroundPosition: "0%",
       }}
@@ -307,7 +307,7 @@ function CardBranding() {
   return (
     <a
       href="#services"
-      className={`${SMALL_CARD} bg-black shadow-[17px_17px_30px_1px_rgba(0,121,128,0.2)] md:shadow-[34px_34px_60px_1px_rgba(0,0,0,0.2)]`}
+      className={`${SMALL_CARD} bg-black shadow-[17px_17px_30px_1px_rgba(0,248,255,0.15)] md:shadow-[34px_34px_60px_1px_rgba(0,0,0,0.2)]`}
     >
       <div className="absolute inset-0" aria-hidden="true">
         <img
@@ -331,9 +331,9 @@ function CardDesignSystem() {
   return (
     <a
       href="#services"
-      className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(0,121,128,0.2)] md:shadow-[34px_34px_60px_1px_rgba(0,121,128,0.2)]`}
+      className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(0,248,255,0.2)] md:shadow-[34px_34px_60px_1px_rgba(0,248,255,0.2)]`}
       style={{
-        backgroundColor: "#007980",
+        backgroundColor: "#00F8FF",
         backgroundImage: bgImage(BG.designSystem),
         backgroundPosition: "0 0",
       }}
@@ -381,7 +381,7 @@ function CarouselArrow({
       type="button"
       onClick={onClick}
       aria-label={direction === "left" ? "Previous services" : "Next services"}
-      className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-blue bg-white text-primary-blue transition hover:border-primary-blue hover:bg-primary-blue hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
+      className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-blue bg-white text-ink transition hover:border-primary-blue hover:bg-primary-blue hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
     >
       <svg
         width="16"

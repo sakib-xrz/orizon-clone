@@ -120,8 +120,8 @@ function NavItem({
         <span
           className={`relative flex h-7 w-7 shrink-0 items-center justify-center self-center rounded-full transition-colors duration-200 ease-[cubic-bezier(0.77,0,0.175,1)] ${
             active
-              ? "bg-primary-blue text-white"
-              : "bg-ink/[0.04] text-ink group-hover:bg-primary-blue group-hover:text-white min-[480px]:bg-transparent min-[480px]:group-hover:bg-primary-blue"
+              ? "bg-primary-blue text-ink"
+              : "bg-ink/[0.04] text-ink group-hover:bg-primary-blue group-hover:text-ink min-[480px]:bg-transparent min-[480px]:group-hover:bg-primary-blue"
           }`}
           aria-hidden="true"
         >

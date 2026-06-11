@@ -10,8 +10,12 @@ const config: Config = {
       colors: {
         ink: "#0f0928",
         muted: "#665f82",
-        "primary-blue": "#007980",
-        "shape-blue": "#00AEB8",
+        brand: "#00F8FF",
+        "primary-blue": "#00F8FF",
+        "brand-light": "#8EFDFF",
+        "brand-mid": "#00D4DC",
+        "brand-dark": "#00A8B0",
+        "shape-blue": "#00D4DC",
         "button-border": "#8EFDFF",
         "light-blue": "#00F8FF",
         "input-bg": "#f4f3f9",
@@ -21,8 +25,9 @@ const config: Config = {
           800: "#13123a",
         },
         teal: {
-          deep: "#007980",
-          dark: "#005F66",
+          deep: "#00A8B0",
+          dark: "#009098",
+          light: "#00D4DC",
         },
       },
       fontFamily: {
@@ -39,15 +44,16 @@ const config: Config = {
         "card-lg": "32px",
       },
       boxShadow: {
-        "blue-glow": "0 18px 40px -12px rgba(0, 121, 128, 0.55)",
-        "blue-glow-lg": "0 24px 60px -10px rgba(0, 121, 128, 0.55)",
+        "blue-glow": "0 18px 40px -12px rgba(0, 248, 255, 0.45)",
+        "blue-glow-lg": "0 24px 60px -10px rgba(0, 248, 255, 0.45)",
         soft: "0 20px 60px -20px rgba(15, 9, 40, 0.18)",
+        "brand-glow": "0 0 24px rgba(0, 248, 255, 0.35)",
       },
       backgroundImage: {
         "blue-gradient":
-          "linear-gradient(120deg, #007980 0%, #00AEB8 45%, #00F8FF 100%)",
+          "linear-gradient(120deg, #00D4DC 0%, #00F8FF 100%)",
         "heading-gradient":
-          "linear-gradient(96deg, #00F8FF 0%, #007980 50%, #00AEB8 100%)",
+          "linear-gradient(96deg, #00F8FF 0%, #8EFDFF 100%)",
       },
       keyframes: {
         marquee: {

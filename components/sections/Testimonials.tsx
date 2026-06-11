@@ -220,7 +220,7 @@ function ArrowButton({
       aria-label={
         direction === "left" ? "Previous testimonial" : "Next testimonial"
       }
-      className="flex h-12 w-12 items-center justify-center rounded-full border border-primary-blue bg-white text-primary-blue transition hover:border-primary-blue hover:bg-primary-blue hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 lg:h-[58px] lg:w-[58px]"
+      className="flex h-12 w-12 items-center justify-center rounded-full border border-primary-blue bg-white text-ink transition hover:border-primary-blue hover:bg-primary-blue hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 lg:h-[58px] lg:w-[58px]"
     >
       <svg
         width="16"
@@ -369,7 +369,7 @@ export function Testimonials() {
                     style={{ objectPosition: q.imagePosition ?? "50% 10%" }}
                   />
                   {q.video && (
-                    <span className="absolute bottom-1 right-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary-blue text-white shadow-soft">
+                    <span className="absolute bottom-1 right-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary-blue text-ink shadow-soft">
                       <PlayIcon size={9} />
                     </span>
                   )}
@@ -443,7 +443,7 @@ export function Testimonials() {
                 {/* Static play button */}
                 {q.video && (
                   <span
-                    className={`absolute bottom-7 right-6 z-[6] flex h-12 w-12 items-center justify-center rounded-full bg-primary-blue text-white shadow-soft transition-opacity duration-200 ${
+                    className={`absolute bottom-7 right-6 z-[6] flex h-12 w-12 items-center justify-center rounded-full bg-primary-blue text-ink shadow-soft transition-opacity duration-200 ${
                       hovering ? "opacity-0" : "opacity-100"
                     }`}
                     aria-hidden="true"
@@ -455,7 +455,7 @@ export function Testimonials() {
                 {/* Floating play cursor on hover */}
                 {q.video && hovering && (
                   <span
-                    className="pointer-events-none absolute z-[7] flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary-blue/80 text-white shadow-blue-glow backdrop-blur-sm"
+                    className="pointer-events-none absolute z-[7] flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary-blue/90 text-ink shadow-blue-glow backdrop-blur-sm"
                     style={{ left: cursor.x, top: cursor.y }}
                     aria-hidden="true"
                   >

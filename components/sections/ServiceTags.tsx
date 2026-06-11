@@ -1,9 +1,5 @@
 import { Reveal } from "@/components/ui/Reveal";
 
-const CDN = "https://cdn.prod.website-files.com/5d27763c46ba9e561dc5b972";
-
-const ASK_US_ICON = `${CDN}/65776d528b109ab0b62b9af0_Frame%201160445237.svg`;
-
 const COL_A = [
   "Branding & Visual Identity",
   "Mobile App & Web Design",
@@ -57,6 +53,25 @@ function Col({
   );
 }
 
+function AskUsIcon() {
+  return (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 36 36"
+      fill="none"
+      aria-hidden="true"
+      className="h-8 w-8"
+    >
+      <rect width="36" height="36" rx="18" className="fill-primary-blue" />
+      <path
+        d="M19.8695 14.9525L13.548 14.9525L13.548 13.2861H22.7144V22.4526L21.048 22.4526L21.048 16.131L13.8756 23.3035L12.6971 22.125L19.8695 14.9525Z"
+        className="fill-ink"
+      />
+    </svg>
+  );
+}
+
 export function ServiceTags() {
   return (
     <section className="w-full overflow-x-clip pb-16 lg:mx-auto lg:max-w-[1200px] lg:px-8">
@@ -77,15 +92,10 @@ export function ServiceTags() {
               </span>
               <a
                 href="mailto:info@maxverse.com?subject=Questions%20on%20additional%20services"
-                className="flex h-8 items-center pl-3"
+                className="flex h-8 items-center pl-3 transition-opacity hover:opacity-80"
                 aria-label="Email us about additional services"
               >
-                <img
-                  src={ASK_US_ICON}
-                  alt=""
-                  className="h-8 w-8"
-                  loading="lazy"
-                />
+                <AskUsIcon />
               </a>
             </li>
           </Col>

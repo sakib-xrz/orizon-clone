@@ -30,25 +30,25 @@ export function GradientButton({
   const base =
     "group relative inline-flex items-center overflow-hidden uppercase focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2";
   const gradientChrome =
-    "rounded-pill bg-[linear-gradient(#007980,#007980)_padding-box,linear-gradient(182deg,#00F8FF,#8EFDFF)_border-box] text-white shadow-[1px_1px_2px_rgba(0,121,128,0.06),3px_3px_4px_rgba(0,121,128,0.1),9px_7px_9px_rgba(0,121,128,0.13),18px_15px_18px_rgba(0,121,128,0.15),32px_25px_32px_rgba(0,121,128,0.2),50px_40px_60px_rgba(0,121,128,0.09)]";
+    "rounded-pill border border-button-border bg-primary-blue text-ink shadow-blue-glow transition-[filter,box-shadow] duration-300 hover:brightness-[1.03] hover:shadow-blue-glow-lg";
 
   const variants: Record<Variant, string> = {
     gradient: `min-h-[50px] gap-2.5 pl-7 pr-[3px] ${gradientChrome}`,
     compact: `h-[50px] min-h-[50px] w-40 justify-center px-5 ${gradientChrome}`,
     outline:
-      "z-[1] min-h-[50px] gap-2.5 rounded-pill border border-primary-blue bg-white pl-7 pr-[3px] text-primary-blue",
+      "z-[1] min-h-[50px] gap-2.5 rounded-pill border border-primary-blue bg-white pl-7 pr-[3px] text-ink transition-colors duration-300 hover:border-primary-blue hover:bg-primary-blue hover:text-ink",
     light:
       "min-h-[50px] gap-2.5 rounded-pill bg-white pl-7 pr-[3px] text-ink shadow-soft",
   };
 
   const labelClass =
-    "relative z-[1] font-semibold text-white " +
+    "relative z-[1] font-semibold " +
     (isCompact
       ? "text-[13px] leading-[15px] tracking-[0.08em]"
       : "text-[15px] leading-[1.2] tracking-[1.17px]");
 
   const outlineLabelClass =
-    "relative z-[1] text-[15px] font-semibold leading-[1.2] tracking-[1.17px] text-primary-blue";
+    "relative z-[1] text-[15px] font-semibold leading-[1.2] tracking-[1.17px] text-ink transition-colors duration-300 group-hover:text-ink";
 
   return (
     <a
@@ -56,12 +56,14 @@ export function GradientButton({
       aria-label={ariaLabel}
       className={`${base} ${variants[variant]} ${className}`}
     >
-      {isGradient ? (
+      {isGradient && (
         <span
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-full w-full bg-[url('/button-bg-layer.png')] bg-cover bg-center transition-all duration-[550ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:h-[300%] group-hover:w-[150%] group-focus-visible:h-[300%] group-focus-visible:w-[150%]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_120%,rgba(142,253,255,0.5),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100"
           aria-hidden="true"
         />
-      ) : (
+      )}
+
+      {!isGradient && variant !== "outline" && (
         <span
           className="pointer-events-none absolute inset-0 w-0 bg-primary-blue/5 transition-[width] duration-[550ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:w-full group-focus-visible:w-full"
           aria-hidden="true"
@@ -79,7 +81,7 @@ export function GradientButton({
             alt=""
             width={40}
             height={40}
-            className="block h-10 w-10 rounded-full border border-button-border object-contain object-right"
+            className="block h-10 w-10 rounded-full object-contain object-right"
             aria-hidden
           />
         </span>

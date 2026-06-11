@@ -1,13 +1,13 @@
 import Image from "next/image";
+import Logo from "@/public/logo.png";
 
 export function MaxVerseLogo({ className = "" }: { className?: string }) {
   return (
     <Image
-      src="/logo.png"
+      src={Logo}
       alt="MaxVerse"
-      width={200}
-      height={60}
-      className={`h-16 w-auto ${className}`}
+      className={`h-8 w-auto drop-shadow-brand-glow ${className}`}
+      quality={100}
       priority
     />
   );

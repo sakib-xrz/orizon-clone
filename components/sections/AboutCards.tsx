@@ -76,7 +76,7 @@ function ColBody({ children }: { children: React.ReactNode }) {
 function CardWhyMaxVerse({ isStatic }: { isStatic?: boolean }) {
   return (
     <div
-      className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-[#064248] px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]"
+      className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-brand-dark px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]"
       style={{
         backgroundImage: `url(${ASSETS.card1Bg})`,
         backgroundPosition: "50% 100%",
@@ -170,7 +170,7 @@ function CardWhyMaxVerse({ isStatic }: { isStatic?: boolean }) {
 
 function CardGetThingsDone({ isStatic }: { isStatic?: boolean }) {
   return (
-    <div className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-[#007980] px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]">
+    <div className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-brand-mid px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]">
       {/* background videos */}
       <video
         className="absolute inset-0 z-0 hidden h-full w-full object-cover md:block"
@@ -321,7 +321,7 @@ function AvatarCluster() {
 function CardPeopleLove() {
   return (
     <div
-      className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-[#00AEB8] px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]"
+      className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-[#00E0E8] px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]"
       style={{
         backgroundImage: `url(${ASSETS.card3Bg})`,
         backgroundPosition: "50%",
