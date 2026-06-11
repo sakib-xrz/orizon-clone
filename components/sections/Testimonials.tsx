@@ -28,7 +28,7 @@ const QUOTES: Quote[] = [
     name: "Sean Rad",
     role: "Founder at",
     company: "Tinder",
-    logo: `${CDN}/62c881e3afbd27ed3a915855_Frame%201160444055%20(1).svg`,
+    logo: `${CDN}/62bd7694ec3f0e8244d565be_Frame%20116044987%20(1).svg`,
     logoWidth: 88,
     image: `${CDN}/628b84f384075d3a9be8fe28_testimonial%202%20(1).avif`,
     imagePosition: "50% 0%",
@@ -179,6 +179,34 @@ function PlayIcon({ size = 14 }: { size?: number }) {
   );
 }
 
+function VideoPlayBadge({ size = 22 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 38 38"
+      fill="none"
+      aria-hidden="true"
+      className="shrink-0"
+    >
+      <rect x="1" y="1" width="36" height="36" rx="18" className="fill-primary-blue" />
+      <path
+        d="M26.376 19.4161L15.777 26.4821C15.7017 26.5322 15.6142 26.5609 15.5239 26.5652C15.4336 26.5696 15.3437 26.5493 15.264 26.5066C15.1843 26.4639 15.1176 26.4004 15.0711 26.3228C15.0246 26.2452 15 26.1565 15 26.0661V11.9341C15 11.8436 15.0246 11.7549 15.0711 11.6773C15.1176 11.5997 15.1843 11.5362 15.264 11.4935C15.3437 11.4508 15.4336 11.4306 15.5239 11.4349C15.6142 11.4392 15.7017 11.468 15.777 11.5181L26.376 18.5841C26.4445 18.6297 26.5006 18.6916 26.5395 18.7642C26.5783 18.8367 26.5986 18.9178 26.5986 19.0001C26.5986 19.0824 26.5783 19.1634 26.5395 19.236C26.5006 19.3085 26.4445 19.3704 26.376 19.4161Z"
+        fill="white"
+      />
+      <rect
+        x="1"
+        y="1"
+        width="36"
+        height="36"
+        rx="18"
+        stroke="white"
+        strokeWidth="2"
+      />
+    </svg>
+  );
+}
+
 function ArrowButton({
   direction,
   onClick,
@@ -192,7 +220,7 @@ function ArrowButton({
       aria-label={
         direction === "left" ? "Previous testimonial" : "Next testimonial"
       }
-      className="flex h-12 w-12 items-center justify-center rounded-full border border-button-border/70 bg-white text-primary-blue transition hover:border-primary-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 lg:h-[58px] lg:w-[58px]"
+      className="flex h-12 w-12 items-center justify-center rounded-full border border-primary-blue bg-white text-primary-blue transition hover:border-primary-blue hover:bg-primary-blue hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 lg:h-[58px] lg:w-[58px]"
     >
       <svg
         width="16"
@@ -341,7 +369,7 @@ export function Testimonials() {
                     style={{ objectPosition: q.imagePosition ?? "50% 10%" }}
                   />
                   {q.video && (
-                    <span className="absolute bottom-1 right-1 flex h-6 w-6 items-center justify-center rounded-full bg-white text-primary-blue shadow-soft">
+                    <span className="absolute bottom-1 right-1 flex h-6 w-6 items-center justify-center rounded-full bg-primary-blue text-white shadow-soft">
                       <PlayIcon size={9} />
                     </span>
                   )}
@@ -354,6 +382,7 @@ export function Testimonials() {
                     <p className="whitespace-nowrap text-sm leading-5 text-muted">
                       {q.role}
                     </p>
+                    {q.video && <VideoPlayBadge />}
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={q.logo}
@@ -414,7 +443,7 @@ export function Testimonials() {
                 {/* Static play button */}
                 {q.video && (
                   <span
-                    className={`absolute bottom-7 right-6 z-[6] flex h-12 w-12 items-center justify-center rounded-full bg-white text-primary-blue shadow-soft transition-opacity duration-200 ${
+                    className={`absolute bottom-7 right-6 z-[6] flex h-12 w-12 items-center justify-center rounded-full bg-primary-blue text-white shadow-soft transition-opacity duration-200 ${
                       hovering ? "opacity-0" : "opacity-100"
                     }`}
                     aria-hidden="true"
@@ -481,6 +510,7 @@ export function Testimonials() {
                     <p className="whitespace-nowrap text-base leading-[21px] text-muted lg:text-xl">
                       {q.role}
                     </p>
+                    {q.video && <VideoPlayBadge />}
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={q.logo}

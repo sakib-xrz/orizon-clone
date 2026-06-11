@@ -62,15 +62,15 @@ orizon-clone/
 | --- | --- |
 | Ink / heading text | `#0f0928` |
 | Muted body text | `#665f82` |
-| Primary blue | `#2b00d4` |
-| Shape blue | `#3a28dc` |
-| Light blue (gradient) | `#2c98f0` |
-| Button border | `#919ff7` |
+| Primary cyan base | `#007980` |
+| Shape cyan | `#00AEB8` |
+| Logo cyan / highlight | `#00F8FF` |
+| Button border | `#8EFDFF` |
 | Input / panel bg | `#f4f3f9` |
-| Section backgrounds | navy `#0f0928`, blue gradient, teal `#1d6f78` |
+| Section backgrounds | navy `#0f0928`, cyan gradient, deep cyan `#007980` |
 
-Buttons are gradient pills (`#2b00d4 → #3a28dc`) with a blue glow shadow and a
-circular arrow that rotates on hover. Selected headings use a cyan→blue→indigo
+Buttons are gradient pills (`#007980 → #00AEB8 → #00F8FF`) with a cyan glow shadow and a
+circular arrow that rotates on hover. Selected headings use a cyan tonal
 `background-clip:text` gradient (`.gradient-text`).
 
 ## Accessibility & performance

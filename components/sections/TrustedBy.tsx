@@ -1,9 +1,6 @@
 import { LogoCarouselLottie } from "@/components/ui/LogoCarouselLottie";
 import { Reveal } from "@/components/ui/Reveal";
 
-const BY_GRADIENT =
-  'url("https://cdn.prod.website-files.com/5d27763c46ba9e561dc5b972/696e706420dc45f15268b34d_Group%202147261870%20(1).svg")';
-
 export function TrustedBy() {
   return (
     <section
@@ -13,23 +10,12 @@ export function TrustedBy() {
     >
       <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-10">
         <h2 className="text-[38px] font-semibold leading-[1.1] tracking-[-0.5px] sm:text-[44px] lg:text-[52px] lg:tracking-[-1px]">
-          <span className="block">
+          <span className="block text-ink">
             <span className="bg-heading-gradient bg-clip-text text-transparent">
-              Trusted{" "}
-            </span>
-            <span
-              className="bg-clip-text text-transparent"
-              style={{
-                backgroundImage: BY_GRADIENT,
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundSize: "cover",
-              }}
-            >
-              by
+              Trusted by
             </span>
           </span>
-          <span className="block">awesome clients</span>
+          <span className="block text-ink">awesome clients</span>
         </h2>
         <p className="text-base leading-[1.65] text-muted lg:text-[17px] lg:leading-[1.75]">
           Not to brag, but a lot of hot startups and market leaders reach out

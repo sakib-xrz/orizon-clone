@@ -76,7 +76,7 @@ function ColBody({ children }: { children: React.ReactNode }) {
 function CardWhyMaxVerse({ isStatic }: { isStatic?: boolean }) {
   return (
     <div
-      className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-[#23184f] px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]"
+      className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-[#064248] px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]"
       style={{
         backgroundImage: `url(${ASSETS.card1Bg})`,
         backgroundPosition: "50% 100%",
@@ -146,7 +146,7 @@ function CardWhyMaxVerse({ isStatic }: { isStatic?: boolean }) {
       {/* desktop footer: client logos + stats */}
       {!isStatic && (
         <div className="absolute inset-x-0 bottom-0 z-10 hidden px-[60px] lg:block">
-          <div className="flex items-center justify-between gap-20 border-t border-[#a9aaee]/30 py-[clamp(20px,4vh,42px)]">
+          <div className="flex items-center justify-between gap-20 border-t border-[#8EFDFF]/30 py-[clamp(20px,4vh,42px)]">
             <img
               src={ASSETS.footerLogos}
               alt="Tinder, Kernel, Uber Eats, Love the sales logos"
@@ -170,7 +170,7 @@ function CardWhyMaxVerse({ isStatic }: { isStatic?: boolean }) {
 
 function CardGetThingsDone({ isStatic }: { isStatic?: boolean }) {
   return (
-    <div className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-[#2900d2] px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]">
+    <div className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-[#007980] px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]">
       {/* background videos */}
       <video
         className="absolute inset-0 z-0 hidden h-full w-full object-cover md:block"
@@ -321,7 +321,7 @@ function AvatarCluster() {
 function CardPeopleLove() {
   return (
     <div
-      className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-[#32929d] px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]"
+      className="relative flex h-full w-full flex-col justify-center overflow-hidden rounded-[20px] bg-[#00AEB8] px-6 py-20 sm:px-10 lg:px-[60px] lg:pb-[18vh] lg:pt-[16vh]"
       style={{
         backgroundImage: `url(${ASSETS.card3Bg})`,
         backgroundPosition: "50%",

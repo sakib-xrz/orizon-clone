@@ -26,12 +26,12 @@ type CaseStudy = {
 };
 
 const SHADOW_COLORS: Record<ShadowVariant, string> = {
-  purple: "bg-[#36165166]",
-  blue: "bg-[#17397d66]",
+  purple: "bg-[#006B7366]",
+  blue: "bg-[#00798066]",
   gray: "bg-[#29292966]",
-  green: "bg-[#1fc4a04d]",
+  green: "bg-[#00AEB84d]",
   dark: "bg-[#18181966]",
-  navy: "bg-[#31209a66]",
+  navy: "bg-[#005F6666]",
 };
 
 const CASE_STUDIES: CaseStudy[] = [
@@ -60,7 +60,7 @@ const CASE_STUDIES: CaseStudy[] = [
     video:
       "https://dl.dropboxusercontent.com/scl/fi/s70zpzc2r7wf9edscgn1c/Orizon_Showreel_Travelwise_new-2026.mp4?rlkey=8r5l13v9l8wlt2w4awvuefhgi&st=5s4xizd6&dl=0",
     backgroundImage: `${CDN}/6a0cdcdbaf6cd7e191095e50_case%20study%20card%20(1).avif`,
-    backgroundColor: "#13287f",
+    backgroundColor: "#007980",
     shadow: "blue",
     mockupClassName: "relative -bottom-10 left-[5%]",
   },
@@ -136,9 +136,6 @@ const CASE_STUDIES: CaseStudy[] = [
     mockupClassName: "relative -bottom-[11%] min-w-[106%]",
   },
 ];
-
-const SCROLLBAR_TRACK = `${CDN}/66d6edc16467d331f14ea3bc_Rectangle%203463741.svg`;
-const SCROLLBAR_THUMB = `${CDN}/66d6ed94ff74a4ec9938cbfc_Rectangle%203463742.svg`;
 
 const CARD_WIDTH =
   "w-[calc((100vw-3rem-0.75rem)/1.1)] min-[480px]:max-md:w-[calc((100vw-4rem-0.75rem)/1.5)] md:max-lg:w-[calc((100vw-3.125rem-1.5rem)/1.8)] lg:w-[412px]";
@@ -297,19 +294,18 @@ export function FeaturedProjects() {
           aria-valuenow={Math.round(thumbLeft)}
           aria-valuemin={0}
           aria-valuemax={100}
-          className="relative mx-auto mt-8 hidden h-16 w-full max-w-[496px] cursor-pointer touch-none select-none bg-contain bg-left bg-no-repeat lg:block"
-          style={{ backgroundImage: `url('${SCROLLBAR_TRACK}')` }}
+          className="relative mx-auto mt-8 hidden h-16 w-full max-w-[496px] cursor-pointer touch-none select-none lg:block"
           onPointerDown={handleScrollbarPointerDown}
           onPointerMove={handleScrollbarPointerMove}
           onPointerUp={handleScrollbarPointerUp}
           onPointerCancel={handleScrollbarPointerUp}
         >
+          <div className="absolute top-0 h-1.5 w-full rounded-full bg-[#F2F2F2]" />
           <div
-            className="absolute top-0 h-16 bg-contain bg-left bg-no-repeat transition-[left,width] duration-150 ease-out"
+            className="absolute top-0 h-1.5 rounded-full bg-primary-blue transition-[left,width] duration-150 ease-out"
             style={{
               left: `${thumbLeft}%`,
               width: `${thumbWidth}%`,
-              backgroundImage: `url('${SCROLLBAR_THUMB}')`,
             }}
           />
         </div>
@@ -472,7 +468,7 @@ function CarouselArrow({
       type="button"
       onClick={onClick}
       aria-label={direction === "left" ? "Previous projects" : "Next projects"}
-      className="flex h-11 w-11 items-center justify-center rounded-full border border-button-border/60 text-primary-blue transition hover:border-primary-blue hover:bg-primary-blue hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
+      className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-blue bg-white text-primary-blue transition hover:border-primary-blue hover:bg-primary-blue hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
     >
       <svg
         width="16"

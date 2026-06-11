@@ -4,8 +4,8 @@
 <path d="M28.2429 22.3431L20.6571 22.3431L20.6571 20.3434H31.6568V31.3431L29.6571 31.3431L29.6571 23.7573L21.0502 32.3642L19.636 30.95L28.2429 22.3431Z" fill="white"/>
 <defs>
 <radialGradient id="paint0_radial_11652_60951" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(26 26) scale(30.5349)">
-<stop offset="0.555185" stop-color="#2B00D4"/>
-<stop offset="1" stop-color="#1663FF"/>
+<stop offset="0.555185" stop-color="#007980"/>
+<stop offset="1" stop-color="#00DCE4"/>
 </radialGradient>
 </defs>
 </svg>

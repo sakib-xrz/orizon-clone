@@ -5,8 +5,6 @@ import { GradientButton } from "@/components/ui/GradientButton";
 
 const CDN = "https://cdn.prod.website-files.com/5d27763c46ba9e561dc5b972";
 
-const CHECK_ICON = `${CDN}/6926ca15da272578e81566be_check.svg`;
-
 type Card = {
   eyebrow: string;
   title: string;
@@ -60,14 +58,20 @@ function FeatureCard({ card, index }: { card: Card; index: number }) {
           </h3>
           <ul className="mb-6 flex w-full list-none flex-col gap-2 p-0 text-sm leading-[26px] text-ink sm:text-base">
             {card.items.map((item) => (
-              <li
-                key={item}
-                className="bg-left bg-no-repeat pl-9"
-                style={{
-                  backgroundImage: `url('${CHECK_ICON}')`,
-                  backgroundSize: "auto",
-                }}
-              >
+              <li key={item} className="flex items-start gap-3">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                  className="mt-0.5 shrink-0 text-primary-blue"
+                >
+                  <path
+                    d="M9.99999 15.172L19.192 5.979L20.607 7.393L9.99999 18L3.63599 11.636L5.04999 10.222L9.99999 15.172Z"
+                    fill="currentColor"
+                  />
+                </svg>
                 {item}
               </li>
             ))}

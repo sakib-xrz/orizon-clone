@@ -30,7 +30,7 @@ export function GradientButton({
   const base =
     "group relative inline-flex items-center overflow-hidden uppercase focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2";
   const gradientChrome =
-    "rounded-pill bg-[linear-gradient(#2b00d4,#2b00d4)_padding-box,linear-gradient(182deg,#3d83fb,#74a3ff)_border-box] text-white shadow-[1px_1px_2px_rgba(44,46,129,0.06),3px_3px_4px_rgba(44,46,129,0.1),9px_7px_9px_rgba(44,46,129,0.13),18px_15px_18px_rgba(44,46,129,0.15),32px_25px_32px_rgba(44,46,129,0.2),50px_40px_60px_rgba(44,46,129,0.09)]";
+    "rounded-pill bg-[linear-gradient(#007980,#007980)_padding-box,linear-gradient(182deg,#00F8FF,#8EFDFF)_border-box] text-white shadow-[1px_1px_2px_rgba(0,121,128,0.06),3px_3px_4px_rgba(0,121,128,0.1),9px_7px_9px_rgba(0,121,128,0.13),18px_15px_18px_rgba(0,121,128,0.15),32px_25px_32px_rgba(0,121,128,0.2),50px_40px_60px_rgba(0,121,128,0.09)]";
 
   const variants: Record<Variant, string> = {
     gradient: `min-h-[50px] gap-2.5 pl-7 pr-[3px] ${gradientChrome}`,

@@ -68,7 +68,9 @@ function CardDesc({
   className?: string;
 }) {
   return (
-    <p className={`text-[14px] leading-[1.5] text-white/80 md:text-base ${className}`}>
+    <p
+      className={`text-[14px] leading-[1.5] text-white/80 md:text-base ${className}`}
+    >
       {children}
     </p>
   );
@@ -80,8 +82,8 @@ function CardUiUx() {
   return (
     <a
       href="#services"
-      className={`${BIG_CARD} justify-between shadow-[17px_17px_40px_1px_rgba(125,64,164,0.2)] md:w-[440px] md:shadow-[34px_34px_60px_1px_rgba(125,64,164,0.2)]`}
-      style={{ backgroundColor: "#21113a", backgroundImage: bgImage(BG.uiux) }}
+      className={`${BIG_CARD} justify-between shadow-[17px_17px_40px_1px_rgba(0,121,128,0.2)] md:w-[440px] md:shadow-[34px_34px_60px_1px_rgba(0,121,128,0.2)]`}
+      style={{ backgroundColor: "#064248", backgroundImage: bgImage(BG.uiux) }}
     >
       <div className="relative z-[2] px-6 pt-10 md:px-12 md:pt-11">
         <CardTitle>UI/UX Design</CardTitle>
@@ -135,8 +137,11 @@ function CardMobileApp() {
   return (
     <a
       href="#services"
-      className={`${BIG_CARD} justify-between shadow-[17px_17px_40px_1px_rgba(48,86,202,0.2)] md:shadow-[34px_34px_60px_1px_rgba(48,86,202,0.2)]`}
-      style={{ backgroundColor: "#2458e8", backgroundImage: bgImage(BG.mobileApp) }}
+      className={`${BIG_CARD} justify-between shadow-[17px_17px_40px_1px_rgba(0,121,128,0.2)] md:shadow-[34px_34px_60px_1px_rgba(0,121,128,0.2)]`}
+      style={{
+        backgroundColor: "#007980",
+        backgroundImage: bgImage(BG.mobileApp),
+      }}
     >
       <div className="relative z-[2] px-6 pt-10 md:px-12 md:pt-11">
         <CardTitle>Mobile App Design</CardTitle>
@@ -237,8 +242,11 @@ function CardLanding() {
   return (
     <a
       href="#services"
-      className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(105,31,116,0.25)] md:shadow-[34px_34px_60px_1px_rgba(82,63,195,0.2)]`}
-      style={{ backgroundColor: "#523fc3", backgroundImage: bgImage(BG.landing) }}
+      className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(0,121,128,0.25)] md:shadow-[34px_34px_60px_1px_rgba(0,121,128,0.2)]`}
+      style={{
+        backgroundColor: "#007980",
+        backgroundImage: bgImage(BG.landing),
+      }}
     >
       <div className="absolute inset-0" aria-hidden="true">
         <img
@@ -269,9 +277,9 @@ function CardAi() {
   return (
     <a
       href="#services"
-      className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(10,53,127,0.2)] md:shadow-[34px_34px_60px_1px_rgba(206,79,148,0.2)]`}
+      className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(0,121,128,0.2)] md:shadow-[34px_34px_60px_1px_rgba(0,121,128,0.2)]`}
       style={{
-        backgroundColor: "#ce4f94",
+        backgroundColor: "#00AEB8",
         backgroundImage: bgImage(BG.ai),
         backgroundPosition: "0%",
       }}
@@ -299,7 +307,7 @@ function CardBranding() {
   return (
     <a
       href="#services"
-      className={`${SMALL_CARD} bg-black shadow-[17px_17px_30px_1px_rgba(10,53,127,0.2)] md:shadow-[34px_34px_60px_1px_rgba(0,0,0,0.2)]`}
+      className={`${SMALL_CARD} bg-black shadow-[17px_17px_30px_1px_rgba(0,121,128,0.2)] md:shadow-[34px_34px_60px_1px_rgba(0,0,0,0.2)]`}
     >
       <div className="absolute inset-0" aria-hidden="true">
         <img
@@ -323,9 +331,9 @@ function CardDesignSystem() {
   return (
     <a
       href="#services"
-      className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(10,53,127,0.2)] md:shadow-[34px_34px_60px_1px_rgba(47,77,184,0.2)]`}
+      className={`${SMALL_CARD} shadow-[17px_17px_30px_1px_rgba(0,121,128,0.2)] md:shadow-[34px_34px_60px_1px_rgba(0,121,128,0.2)]`}
       style={{
-        backgroundColor: "#2f4db8",
+        backgroundColor: "#007980",
         backgroundImage: bgImage(BG.designSystem),
         backgroundPosition: "0 0",
       }}
@@ -373,9 +381,15 @@ function CarouselArrow({
       type="button"
       onClick={onClick}
       aria-label={direction === "left" ? "Previous services" : "Next services"}
-      className="flex h-11 w-11 items-center justify-center rounded-full border border-button-border/60 text-primary-blue transition hover:border-primary-blue hover:bg-primary-blue hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
+      className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-blue bg-white text-primary-blue transition hover:border-primary-blue hover:bg-primary-blue hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
     >
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        aria-hidden="true"
+      >
         <path
           d={direction === "left" ? "M10 3L5 8l5 5" : "M6 3l5 5-5 5"}
           stroke="currentColor"
@@ -407,7 +421,7 @@ export function Services() {
     >
       <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="text-4xl font-bold sm:text-5xl">
+          <h2 className="text-4xl font-bold sm:text-5xl text-ink">
             <span className="bg-heading-gradient bg-clip-text text-transparent">
               What
             </span>
