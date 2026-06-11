@@ -6,8 +6,8 @@ export function MaxVerseLogo({ className = "" }: { className?: string }) {
       src="/logo.png"
       alt="MaxVerse"
       width={200}
-      height={48}
-      className={`h-9 w-auto ${className}`}
+      height={60}
+      className={`h-16 w-auto ${className}`}
       priority
     />
   );
