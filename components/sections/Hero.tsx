@@ -60,7 +60,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-              className="flex items-center gap-1 whitespace-nowrap text-xs font-thin uppercase leading-[1.5] tracking-[1.2px] text-ink md:text-sm md:tracking-[1.2px]"
+              className="flex items-center gap-1 whitespace-nowrap text-xs font-thin uppercase leading-[1.5] tracking-[1.2px] text-white/80 md:text-sm md:tracking-[1.2px]"
             >
               {slide.starsFirst ? (
                 <>
@@ -92,7 +92,7 @@ export function Hero() {
             animate="show"
             className="max-w-[30rem] min-[992px]:max-w-none"
           >
-            <h1 className="m-0 font-display text-[40px] font-semibold leading-[1.05] tracking-normal text-ink min-[480px]:text-5xl md:text-[56px] min-[992px]:text-[64px] xl:text-[80px]">
+            <h1 className="m-0 font-display text-[40px] font-semibold leading-[1.05] tracking-normal text-white min-[480px]:text-5xl md:text-[56px] min-[992px]:text-[64px] xl:text-[80px]">
               <span className="flex flex-wrap gap-x-3">
                 <span className="bg-heading-gradient bg-clip-text text-transparent">
                   We
@@ -116,7 +116,7 @@ export function Hero() {
             animate="show"
             className="max-w-[32rem] min-[992px]:self-start min-[992px]:pt-2"
           >
-            <p className="m-0 mt-5 text-base leading-[1.5] text-ink md:text-lg">
+            <p className="m-0 mt-5 text-base leading-[1.5] text-white/75 md:text-lg">
               MaxVerse is a leading UX design agency based in Canada. We help
               startups &amp; Fortune 500 companies delight humans on the other
               side of the screen.

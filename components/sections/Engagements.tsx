@@ -50,13 +50,13 @@ function FeatureCard({ card, index }: { card: Card; index: number }) {
     <Reveal delay={index * 0.1}>
       <article className="relative w-full overflow-hidden rounded-[20px] max-lg:pb-[67%] max-lg:min-h-0 max-sm:min-h-[550px] lg:min-h-[720px]">
         <div className="relative z-[2] flex w-full flex-col items-start px-4 pt-7 md:px-7">
-          <p className="mb-2 text-xl font-normal leading-6 text-ink">
+          <p className="mb-2 text-xl font-normal leading-6 text-white">
             {card.eyebrow}
           </p>
-          <h3 className="mb-4 text-2xl font-semibold leading-[1.4] tracking-normal text-ink sm:mb-6 sm:text-4xl sm:tracking-[-0.5px]">
+          <h3 className="mb-4 text-2xl font-semibold leading-[1.4] tracking-normal text-white sm:mb-6 sm:text-4xl sm:tracking-[-0.5px]">
             {card.title}
           </h3>
-          <ul className="mb-6 flex w-full list-none flex-col gap-2 p-0 text-sm leading-[26px] text-ink sm:text-base">
+          <ul className="mb-6 flex w-full list-none flex-col gap-2 p-0 text-sm leading-[26px] text-white/90 sm:text-base">
             {card.items.map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <svg

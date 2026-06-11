@@ -9,7 +9,7 @@ const config: Config = {
     extend: {
       colors: {
         ink: "#0f0928",
-        muted: "#665f82",
+        muted: "#9892b8",
         brand: "#00F8FF",
         "primary-blue": "#00F8FF",
         "brand-light": "#8EFDFF",
@@ -23,6 +23,7 @@ const config: Config = {
         navy: {
           DEFAULT: "#0f0928",
           800: "#13123a",
+          900: "#0a0820",
         },
         teal: {
           deep: "#00A8B0",

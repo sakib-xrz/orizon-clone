@@ -10,12 +10,12 @@ export function TrustedBy() {
     >
       <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-end lg:gap-10">
         <h2 className="text-[38px] font-semibold leading-[1.1] tracking-[-0.5px] sm:text-[44px] lg:text-[52px] lg:tracking-[-1px]">
-          <span className="block text-ink">
+          <span className="block text-white">
             <span className="bg-heading-gradient bg-clip-text text-transparent">
               Trusted by
             </span>
           </span>
-          <span className="block text-ink">awesome clients</span>
+          <span className="block text-white">awesome clients</span>
         </h2>
         <p className="text-base leading-[1.65] text-muted lg:text-[17px] lg:leading-[1.75]">
           Not to brag, but a lot of hot startups and market leaders reach out

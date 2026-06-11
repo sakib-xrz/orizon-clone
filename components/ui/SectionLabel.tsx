@@ -7,7 +7,7 @@ export function SectionLabel({
   className?: string;
   light?: boolean;
 }) {
-  const color = light ? "text-white" : "text-ink";
+  const color = light ? "text-white" : "text-white/90";
 
   return (
     <span

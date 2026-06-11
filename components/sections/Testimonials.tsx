@@ -151,7 +151,7 @@ const QUOTES: Quote[] = [
 
 function QuoteText({ segments }: { segments: Segment[] }) {
   return (
-    <p className="relative z-[1] max-w-[660px] text-lg leading-[1.6] text-ink sm:text-[22px] sm:leading-[1.5] lg:text-[26px]">
+    <p className="relative z-[1] max-w-[660px] text-lg leading-[1.6] text-white sm:text-[22px] sm:leading-[1.5] lg:text-[26px]">
       {segments.map((s, i) =>
         s.bold ? (
           <strong key={i} className="font-bold">
@@ -220,7 +220,7 @@ function ArrowButton({
       aria-label={
         direction === "left" ? "Previous testimonial" : "Next testimonial"
       }
-      className="flex h-12 w-12 items-center justify-center rounded-full border border-primary-blue bg-white text-ink transition hover:border-primary-blue hover:bg-primary-blue hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 lg:h-[58px] lg:w-[58px]"
+      className="flex h-12 w-12 items-center justify-center rounded-full border border-primary-blue bg-navy-800/60 text-white transition hover:border-primary-blue hover:bg-primary-blue hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 focus-visible:ring-offset-navy lg:h-[58px] lg:w-[58px]"
     >
       <svg
         width="16"
@@ -258,7 +258,7 @@ function VideoLightbox({ src, onClose }: { src: string; onClose: () => void }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.25 }}
-      className="fixed inset-0 z-[90] flex items-center justify-center bg-white/85 backdrop-blur-sm"
+      className="fixed inset-0 z-[90] flex items-center justify-center bg-navy/90 backdrop-blur-sm"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -267,7 +267,7 @@ function VideoLightbox({ src, onClose }: { src: string; onClose: () => void }) {
       <button
         onClick={onClose}
         aria-label="Close video"
-        className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-button-border/70 bg-white text-ink transition hover:border-primary-blue hover:text-primary-blue"
+        className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-navy-800 text-white transition hover:border-primary-blue hover:text-primary-blue"
       >
         <svg
           width="14"
@@ -375,7 +375,7 @@ export function Testimonials() {
                   )}
                 </button>
                 <div className="ml-4">
-                  <p className="mb-1 text-xl font-medium leading-7 text-ink">
+                  <p className="mb-1 text-xl font-medium leading-7 text-white">
                     {q.name}
                   </p>
                   <div className="flex flex-wrap items-center gap-2">
@@ -503,7 +503,7 @@ export function Testimonials() {
 
                 {/* Desktop name + logo */}
                 <div className="mt-auto hidden pt-10 md:block">
-                  <p className="mb-2 text-[22px] font-medium leading-[29px] text-ink lg:text-[26px]">
+                  <p className="mb-2 text-[22px] font-medium leading-[29px] text-white lg:text-[26px]">
                     {q.name}
                   </p>
                   <div className="flex items-center gap-3">

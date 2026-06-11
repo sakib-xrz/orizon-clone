@@ -11,7 +11,7 @@ export type ClientLogoItem = {
 export function ClientLogo({ name, className = "" }: ClientLogoItem) {
   return (
     <span
-      className={`select-none whitespace-nowrap text-xl font-bold tracking-tight text-ink/70 ${className}`}
+      className={`select-none whitespace-nowrap text-xl font-bold tracking-tight text-white/60 ${className}`}
     >
       {name}
     </span>

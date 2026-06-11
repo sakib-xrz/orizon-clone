@@ -381,7 +381,7 @@ function CarouselArrow({
       type="button"
       onClick={onClick}
       aria-label={direction === "left" ? "Previous services" : "Next services"}
-      className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-blue bg-white text-ink transition hover:border-primary-blue hover:bg-primary-blue hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
+      className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-blue bg-navy-800/60 text-white transition hover:border-primary-blue hover:bg-primary-blue hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
     >
       <svg
         width="16"
@@ -421,7 +421,7 @@ export function Services() {
     >
       <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <h2 className="text-4xl font-bold sm:text-5xl text-ink">
+          <h2 className="text-4xl font-bold text-white sm:text-5xl">
             <span className="bg-heading-gradient bg-clip-text text-transparent">
               What
             </span>

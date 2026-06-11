@@ -36,9 +36,9 @@ export function GradientButton({
     gradient: `min-h-[50px] gap-2.5 pl-7 pr-[3px] ${gradientChrome}`,
     compact: `h-[50px] min-h-[50px] w-40 justify-center px-5 ${gradientChrome}`,
     outline:
-      "z-[1] min-h-[50px] gap-2.5 rounded-pill border border-primary-blue bg-white pl-7 pr-[3px] text-ink transition-colors duration-300 hover:border-primary-blue hover:bg-primary-blue hover:text-ink",
+      "z-[1] min-h-[50px] gap-2.5 rounded-pill border border-primary-blue bg-transparent pl-7 pr-[3px] text-white transition-colors duration-300 hover:border-primary-blue hover:bg-primary-blue hover:text-ink",
     light:
-      "min-h-[50px] gap-2.5 rounded-pill bg-white pl-7 pr-[3px] text-ink shadow-soft",
+      "min-h-[50px] gap-2.5 rounded-pill border border-white/10 bg-navy-800 pl-7 pr-[3px] text-white shadow-soft",
   };
 
   const labelClass =
@@ -48,7 +48,7 @@ export function GradientButton({
       : "text-[15px] leading-[1.2] tracking-[1.17px]");
 
   const outlineLabelClass =
-    "relative z-[1] text-[15px] font-semibold leading-[1.2] tracking-[1.17px] text-ink transition-colors duration-300 group-hover:text-ink";
+    "relative z-[1] text-[15px] font-semibold leading-[1.2] tracking-[1.17px] text-white transition-colors duration-300 group-hover:text-ink";
 
   return (
     <a

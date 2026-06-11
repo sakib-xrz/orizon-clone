@@ -11,7 +11,7 @@ function SectionHeading() {
   return (
     <>
       <h2 className="hidden text-[38px] font-semibold leading-[1.1] tracking-[-0.5px] sm:text-[44px] lg:block lg:text-[52px] lg:tracking-[-1px]">
-        <span className="block text-ink">
+        <span className="block text-white">
           From{" "}
           <span className="bg-heading-gradient bg-clip-text text-transparent">
             simple{" "}
@@ -21,11 +21,11 @@ function SectionHeading() {
           </span>
           to
         </span>
-        <span className="block text-ink">enterprise-scale UX</span>
+        <span className="block text-white">enterprise-scale UX</span>
       </h2>
 
       <h2 className="text-[38px] font-semibold leading-[1.1] tracking-[-0.5px] sm:text-[44px] lg:hidden">
-        <span className="block text-ink">
+        <span className="block text-white">
           From{" "}
           <span className="bg-heading-gradient bg-clip-text text-transparent">
             Simple{" "}
@@ -34,7 +34,7 @@ function SectionHeading() {
             Apps
           </span>
         </span>
-        <span className="block text-ink">To Enterprise-Scale UX</span>
+        <span className="block text-white">To Enterprise-Scale UX</span>
       </h2>
     </>
   );

@@ -38,11 +38,11 @@ function Col({
 }) {
   return (
     <div className="w-[260px] max-w-[80vw] flex-none md:w-auto md:max-w-none">
-      <ul className="flex h-full flex-col gap-4 rounded-[20px] bg-[#f3f6fc] px-6 py-8 lg:gap-6 lg:bg-transparent lg:p-0">
+      <ul className="flex h-full flex-col gap-4 rounded-[20px] bg-white/[0.04] px-6 py-8 lg:gap-6 lg:bg-transparent lg:p-0">
         {items.map((item) => (
           <li
             key={item}
-            className="text-[16px] leading-6 text-ink lg:text-[18px] lg:leading-9"
+            className="text-[16px] leading-6 text-white/90 lg:text-[18px] lg:leading-9"
           >
             {item}
           </li>
@@ -76,11 +76,11 @@ export function ServiceTags() {
   return (
     <section className="w-full overflow-x-clip pb-16 lg:mx-auto lg:max-w-[1200px] lg:px-8">
       <Reveal>
-        <div className="flex items-stretch gap-2 overflow-x-auto px-5 [scrollbar-width:none] sm:px-6 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible lg:flex lg:justify-between lg:gap-6 lg:rounded-[20px] lg:bg-[#f3f6fc] lg:p-11 lg:px-11 [&::-webkit-scrollbar]:hidden">
+        <div className="flex items-stretch gap-2 overflow-x-auto px-5 [scrollbar-width:none] sm:px-6 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible lg:flex lg:justify-between lg:gap-6 lg:rounded-[20px] lg:bg-white/[0.04] lg:p-11 lg:px-11 [&::-webkit-scrollbar]:hidden">
           <Col items={COL_A} />
           <Col items={COL_B} />
           <Col items={COL_C}>
-            <li className="flex items-center text-[16px] leading-6 text-ink lg:text-[18px] lg:leading-9">
+            <li className="flex items-center text-[16px] leading-6 text-white/90 lg:text-[18px] lg:leading-9">
               <span>
                 Don&apos;t see it?{" "}
                 <a

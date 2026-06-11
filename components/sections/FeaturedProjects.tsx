@@ -300,7 +300,7 @@ export function FeaturedProjects() {
           onPointerUp={handleScrollbarPointerUp}
           onPointerCancel={handleScrollbarPointerUp}
         >
-          <div className="absolute top-0 h-1.5 w-full rounded-full bg-[#F2F2F2]" />
+          <div className="absolute top-0 h-1.5 w-full rounded-full bg-white/10" />
           <div
             className="absolute top-0 h-1.5 rounded-full bg-primary-blue transition-[left,width] duration-150 ease-out"
             style={{
@@ -468,7 +468,7 @@ function CarouselArrow({
       type="button"
       onClick={onClick}
       aria-label={direction === "left" ? "Previous projects" : "Next projects"}
-      className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-blue bg-white text-ink transition hover:border-primary-blue hover:bg-primary-blue hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2"
+      className="flex h-11 w-11 items-center justify-center rounded-full border border-primary-blue bg-navy-800/60 text-white transition hover:border-primary-blue hover:bg-primary-blue hover:text-ink focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-blue focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
     >
       <svg
         width="16"

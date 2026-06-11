@@ -19,10 +19,10 @@ export function CtaSection() {
       className="mx-auto w-full max-w-[1200px] px-5 py-20 sm:px-6 md:px-8 lg:px-[50px] lg:py-[120px] xl:px-[60px]"
     >
       <Reveal>
-        <div className="flex flex-col-reverse items-center gap-8 overflow-hidden rounded-[28px] border border-[#d9d8dd] bg-white p-5 sm:p-6 lg:flex-row lg:justify-between lg:gap-8 lg:p-8">
+        <div className="flex flex-col-reverse items-center gap-8 overflow-hidden rounded-[28px] border border-white/10 bg-navy-800 p-5 sm:p-6 lg:flex-row lg:justify-between lg:gap-8 lg:p-8">
           <div className="flex w-full max-w-[20rem] flex-col items-center gap-8 text-center lg:max-w-[20rem] lg:items-start lg:gap-10 lg:text-left">
             <div className="flex flex-col gap-4 lg:gap-5">
-              <h2 className="text-[38px] font-semibold leading-[1.1] tracking-[-0.5px] sm:text-[44px] lg:text-[52px] lg:tracking-[-1px] text-ink">
+              <h2 className="text-[38px] font-semibold leading-[1.1] tracking-[-0.5px] text-white sm:text-[44px] lg:text-[52px] lg:tracking-[-1px]">
                 Let&apos;s{" "}
                 <span className="bg-heading-gradient bg-clip-text text-transparent">
                   talk
